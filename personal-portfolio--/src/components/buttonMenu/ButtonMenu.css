@@ -1,0 +1,46 @@
+.rectangle {
+  position: relative;
+  width: 200px;      
+  height: 380px;    
+  background-color: rgba(54, 80, 113, 1);
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 100px;  
+  border-bottom-right-radius: 100px;  
+  transition: all 0.3s ease-in-out;
+}
+
+.inner-circle {
+  position: relative;   /* <-- change here */
+  width: 155px;
+  height: 155px;
+  background-color: rgba(255, 255, 255);
+  border-radius: 50%;
+
+  left: 100px;
+  top: 280px;
+  transform: translate(-50%, -50%);
+}
+
+.inner-inner-circle {
+  position: absolute;
+  width: 135px;
+  height: 135px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  border: 6px solid  rgba(54, 80, 113, 1);
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
+
+}
+.rectangle:hover {
+    transition: all 0.3s ease-in-out;
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.7) 0px 18px 36px -18px inset;
+
+    & .inner-inner-circle {
+        background-color:rgba(54, 80, 113, 1);
+    }
+}
