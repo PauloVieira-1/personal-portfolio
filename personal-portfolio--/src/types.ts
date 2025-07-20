@@ -16,9 +16,6 @@ export const darkColors = {
   colorCoral: "colorCoral",
 };
 
-
-export type ColorType = keyof typeof colors;
-
 export type CircleButtonProps = {
   text: string;
   color?: string;
