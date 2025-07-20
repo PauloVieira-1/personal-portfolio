@@ -37,5 +37,12 @@ export const HomeContent: Record<number, HomeContentType> = {
     darkColor: darkColors.colorRose,
     lightColor: lightColors.colorRoseLight,
   },
+  4: {
+    title: "Skills",
+    subtitle: "Discover the technologies and tools I work with.",
+    buttonText: "Skills",
+    darkColor: darkColors.colorCoral,
+    lightColor: lightColors.colorCoralLight,
+  },
 };
 

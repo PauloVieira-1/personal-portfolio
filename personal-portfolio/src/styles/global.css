@@ -43,7 +43,7 @@
     rgba(0, 0, 0, 0.2) 0px 8px 16px,
 
     /* Strong white top light */
-    rgba(255, 255, 255, 1) 0px -20px 16px,
+    rgba(255, 255, 255, 1) 0px -20px 10px,
 
     /* Soft ambient white glow around */
     rgba(255, 255, 255, 0.15) 0px 0px 30px
@@ -55,3 +55,83 @@
 body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
 }
+
+.right-to-left {
+  transition: all 0.3s ease;
+  animation: right-to-left 0.5s ease forwards;
+}
+
+@keyframes right-to-left {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.left-to-right {
+  transition: all 0.3s ease;
+  animation: left-to-right 0.8s ease forwards;
+}
+
+@keyframes left-to-right {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+} 
+
+.left-to-right-fast {
+  transition: all 0.3s ease;
+  animation: left-to-right-fast 0.5s ease forwards;
+}
+
+@keyframes left-to-right-fast {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.orbit-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+}
+
+.orbiter {
+  position: absolute;
+  transform-origin: 200px 0px 0px ; /* rotates around the circle edge */
+}
+
+.spin-in,
+.spin-out {
+  transform-origin: 50% 150%;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.spin-in {
+  animation-name: orbit-in;
+}
+
+.spin-out {
+  animation-name: orbit-out;
+}
+
+@keyframes orbit-in {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(120deg); }
+}
+
+@keyframes orbit-out {
+  from { transform: rotate(120deg); }
+  to   { transform: rotate(0deg); }
+}
+
