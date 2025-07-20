@@ -1,7 +1,4 @@
 export const lightColors = {
-  primary: "primary",
-  coral: "coral",
-  coralLight: "coralLight",
   colorNavyLight: "colorNavyLight",
   colorPurpleLight: "colorPurpleLight",
   colorRoseLight: "colorRoseLight",
@@ -9,12 +6,29 @@ export const lightColors = {
 };
 
 export const darkColors = {
-  navy: "navy",
   colorNavy: "colorNavy",
   colorPurple: "colorPurple",
   colorRose: "colorRose",
   colorCoral: "colorCoral",
 };
+
+
+
+export const customColors = {
+  colorNavy: "#2d4d72",
+  colorNavyLight: "#c6d1dd",
+
+  colorPurple: "#695279",
+  colorPurpleLight: "#d4c8dc",
+
+  colorRose: "#bf657c",
+  colorRoseLight: "#ebc5cf",
+
+  colorCoral: "#f96e73",
+  colorCoralLight: "#fbcfd0",
+} as const;
+
+
 
 export type CircleButtonProps = {
   text: string;

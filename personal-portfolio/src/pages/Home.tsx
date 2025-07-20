@@ -1,6 +1,6 @@
 import CircleButton from "../components/CircleButton/CircleButton";
 import { useState } from "react";
-import { darkColors, lightColors } from "../types";
+import { darkColors, lightColors, customColors} from "../types";
 import { Container } from "react-bootstrap";
 
 function Home() {
@@ -8,14 +8,48 @@ function Home() {
   const [currentColor, setCurrentColor] = useState(darkColors.colorNavy);
   const [secondaryColor, setSecondaryColor] = useState(lightColors.colorNavyLight);
 
-  const handleCircleClick = () => {
-    console.log(currentColor);
-    setCurrentColor(prevColor => prevColor === darkColors.colorNavy ? darkColors.colorPurple : darkColors.colorNavy);
-    setSecondaryColor(prevColor => prevColor === lightColors.colorNavyLight ? lightColors.colorPurpleLight : lightColors.colorNavyLight);
+  const handNextClick = () => {
+    setSecondaryColor(getNextColor("light"));
+    setCurrentColor(getNextColor("dark"));
+  };
+
+  const handPrevClick = () => {
+    setSecondaryColor(getPrevColor("light"));
+    setCurrentColor(getPrevColor("dark"));
+  };
+
+  const getNextColor = (colorType: "light" | "dark") => {
+    if (colorType === "light") {
+      const colors = Object.values(lightColors);
+      const currentIndex = colors.indexOf(secondaryColor as string);
+      console.log(currentIndex, colors[(currentIndex + 1) % colors.length]);
+      return colors[(currentIndex + 1) % colors.length];
+    } 
+    if (colorType === "dark") {
+      const colors = Object.values(darkColors);
+      const currentIndex = colors.indexOf(currentColor as string);
+      console.log(currentIndex, colors[(currentIndex + 1) % colors.length]);
+      return colors[(currentIndex + 1) % colors.length];
+    }
+    return currentColor; // Fallback to current color if no match
+  };
+
+  const getPrevColor = (colorType: "light" | "dark") => {
+    if (colorType === "light") {
+      const colors = Object.values(lightColors);
+      const currentIndex = colors.indexOf(secondaryColor as string);
+      return colors[(currentIndex - 1 + colors.length) % colors.length];
+    }
+    if (colorType === "dark") {
+      const colors = Object.values(darkColors);
+      const currentIndex = colors.indexOf(currentColor as string);
+      return colors[(currentIndex - 1 + colors.length) % colors.length];
+    }
+    return currentColor; 
   };
 
   return (
-    <Container fluid className={`p-0 m-0 bg-${currentColor}`}>
+    <Container fluid className={`p-0 m-0 bg-${currentColor} transition`} style={{ height: "100vh" }}>
     <div className="d-flex justify-content-center align-items-center vh-100 text-black" style={{ backgroundColor: currentColor }}>
       <div className="d-flex align-items-center gap-4">
 
@@ -23,10 +57,11 @@ function Home() {
           xmlns="http://www.w3.org/2000/svg"
           width="60"
           height="60"
-          fill="currentColor"
-          className="bi bi-arrow-left-circle text-primary"
+          fill={customColors[secondaryColor as keyof typeof customColors] || "currentColor"}
+          className="bi bi-arrow-left-circle text-primary enlarge"
           viewBox="0 0 16 16"
           role="button"
+          onClick={handPrevClick}
         >
     
           <path
@@ -52,11 +87,11 @@ function Home() {
           xmlns="http://www.w3.org/2000/svg"
           width="60"
           height="60"
-          fill="currentColor"
-          className="bi bi-arrow-right-circle text-primary"
+          fill={customColors[secondaryColor as keyof typeof customColors] || "currentColor"}
+          className="bi bi-arrow-right-circle text-primary enlarge"
           viewBox="0 0 16 16"
           role="button"
-          onClick={handleCircleClick}
+          onClick={handNextClick}
         >
           <path
             fillRule="evenodd"
