@@ -2,20 +2,28 @@ import CircleButton from "../components/CircleButton/CircleButton";
 import { useState } from "react";
 import { darkColors, lightColors, customColors} from "../types";
 import { Container } from "react-bootstrap";
+import {HomeContent} from "./HomeContent";
+
 
 function Home() {
-
+  const [currentPage, setCurrentPage] = useState(0);
   const [currentColor, setCurrentColor] = useState(darkColors.colorWhite);
   const [secondaryColor, setSecondaryColor] = useState(lightColors.colorBlack);
 
   const handNextClick = () => {
-    setCurrentColor(getNextColor("dark"));
-    setSecondaryColor(getNextColor("light"));
+    setCurrentPage((prev) => (prev + 1) % Object.keys(HomeContent).length);
+    const nextColor = getNextColor("dark");
+    const nextSecondaryColor = getNextColor("light");
+    setCurrentColor(nextColor);
+    setSecondaryColor(nextSecondaryColor);
   };
 
   const handPrevClick = () => {
-    setCurrentColor(getPrevColor("dark"));
-    setSecondaryColor(getPrevColor("light"));
+    setCurrentPage((prev) => (prev - 1 + Object.keys(HomeContent).length) % Object.keys(HomeContent).length);
+    const prevColor = getPrevColor("dark");
+    const prevSecondaryColor = getPrevColor("light");
+    setCurrentColor(prevColor);
+    setSecondaryColor(prevSecondaryColor);
   };
 
   const getNextColor = (colorType: "light" | "dark") => {
@@ -50,9 +58,9 @@ function Home() {
 
   return (
     <Container fluid className={`p-0 m-0 transition bg-${currentColor}`} style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
-  <div className="text-white" style={{ flexShrink: 0, padding: "1rem 2rem", zIndex: 100, position: "absolute" }}>
-    <h1 className="text-">Personal Portfolio</h1>
-    <p className="text-">Click the arrows to change colors!</p>
+  <div className={`p-5 m-3 text-${currentColor === darkColors.colorWhite ? "black" : "white"}`} style={{ flexShrink: 0, zIndex: 100, position: "absolute" }}>
+    <h1 className="text-">{HomeContent[currentPage].title}</h1>
+    <p className="text-">{HomeContent[currentPage].subtitle}</p>
   </div>
   
   <div style={{ flexGrow: 1, display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -84,7 +92,7 @@ function Home() {
           style={{ width: "320px", height: "320px" }}
           id="circle"
         >
-          <CircleButton text="Home" color={currentColor === "colorWhite" ? "colorBlack" : currentColor} />
+          <CircleButton text={HomeContent[currentPage].buttonText} color={currentColor === "colorWhite" ? "colorBlack" : currentColor} />
         </div>
       </div>
 
@@ -113,3 +121,4 @@ function Home() {
 }
 
 export default Home;
+

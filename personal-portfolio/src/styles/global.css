@@ -43,11 +43,15 @@
     rgba(0, 0, 0, 0.2) 0px 8px 16px,
 
     /* Strong white top light */
-    rgba(255, 255, 255, 1) 0px -8px 16px,
+    rgba(255, 255, 255, 1) 0px -20px 16px,
 
     /* Soft ambient white glow around */
     rgba(255, 255, 255, 0.15) 0px 0px 30px
     !important;
 
     transform: scale(1.02) !important;
+}
+
+body {
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
 }
