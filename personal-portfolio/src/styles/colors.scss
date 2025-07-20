@@ -12,7 +12,12 @@ $custom-colors: (
   colorRoseLight: #ebc5cf,
 
   colorCoral: #f96e73,
-  colorCoralLight: #fbcfd0
+  colorCoralLight: #fbcfd0,
+
+  colorBlack: #000000,
+  colorWhite: #ffffff,
+
+  lightGrey1: #e5e5e5
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

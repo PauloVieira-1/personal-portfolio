@@ -1,11 +1,13 @@
 export const lightColors = {
+    colorBlack: "colorBlack",
   colorNavyLight: "colorNavyLight",
   colorPurpleLight: "colorPurpleLight",
   colorRoseLight: "colorRoseLight",
-  colorCoralLight: "colorCoralLight"
+  colorCoralLight: "colorCoralLight",
 };
 
 export const darkColors = {
+    colorWhite: "colorWhite",
   colorNavy: "colorNavy",
   colorPurple: "colorPurple",
   colorRose: "colorRose",
@@ -15,6 +17,9 @@ export const darkColors = {
 
 
 export const customColors = {
+  colorWhite: "#ffffff",
+  colorBlack: "#000000",
+
   colorNavy: "#2d4d72",
   colorNavyLight: "#c6d1dd",
 
@@ -26,6 +31,8 @@ export const customColors = {
 
   colorCoral: "#f96e73",
   colorCoralLight: "#fbcfd0",
+
+
 } as const;
 
 

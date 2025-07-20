@@ -1,7 +1,7 @@
 
 .circle-button {
-  width: 230px;
-  height: 230px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   background-color: #007bff;
   color: white;
@@ -12,6 +12,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .circle-button:hover {
   background-color: #0056b3;
 }
@@ -26,4 +27,27 @@
 
 .enlarge:hover {
   transform: scale(1.4);
+}
+
+.shadow {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none !important;
+}
+
+.shadow:hover {
+  box-shadow:
+    /* Dark base shadow */
+    rgba(0, 0, 0, 0.3) 0px 16px 32px,
+
+    /* Mid-range fill shadow */
+    rgba(0, 0, 0, 0.2) 0px 8px 16px,
+
+    /* Strong white top light */
+    rgba(255, 255, 255, 1) 0px -8px 16px,
+
+    /* Soft ambient white glow around */
+    rgba(255, 255, 255, 0.15) 0px 0px 30px
+    !important;
+
+    transform: scale(1.02) !important;
 }
