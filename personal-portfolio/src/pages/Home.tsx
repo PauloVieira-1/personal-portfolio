@@ -4,21 +4,11 @@ import { darkColors, lightColors, customColors } from "../types";
 import { Container } from "react-bootstrap";
 import { HomeContent } from "./HomeContent";
 
-
-
 function Home() {
   const [currentPage, setCurrentPage] = useState(0);
   const [currentColor, setCurrentColor] = useState(darkColors.colorWhite);
   const [secondaryColor, setSecondaryColor] = useState(lightColors.colorBlack);
   const [stateChange, setStateChange] = useState(true);
-
-
-  const Portfolio = <CircleButton text={HomeContent[0].buttonText} color={HomeContent[0].darkColor}  />;
-  const About = <CircleButton text={HomeContent[1].buttonText} color={HomeContent[1].darkColor} />;
-  const Contact = <CircleButton text={HomeContent[2].buttonText} color={HomeContent[2].darkColor} />;
-  const Projects = <CircleButton text={HomeContent[3].buttonText} color={HomeContent[3].darkColor} />;
-  const Skills = <CircleButton text={HomeContent[4].buttonText} color={HomeContent[4].darkColor} />;  
-
 
   useEffect(() => {
     const initialColor = HomeContent[currentPage].darkColor;
@@ -127,35 +117,49 @@ function Home() {
             />
           </svg>
 
+          {/* Orbiting system */}
           <div
-            className="d-flex justify-content-center align-items-center"
+            className="position-relative"
             style={{
               width: "350px",
               height: "350px",
-              overflow: "hidden",
-                              clipPath: "circle(50% at 50% 50%)",
-
-              backgroundColor: customColors[secondaryColor as keyof typeof customColors],
-              zIndex: 0,
             }}
           >
-            <div
-              className="d-flex justify-content-center align-items-center bg-lightGrey1"
-              style={{
-                width: "320px",
-                height: "320px",
-                borderRadius: "50%",
-                overflow: "hidden",
-                                clipPath: "circle(50% at 50% 50%)",
+            {/* Orbiting circle */}
+            <div className="orbit-wrapper">
+              <div className="orbiting-circle" />
+            </div>
 
-                            }}
-              id="ircle"
+            {/* Main circular button area */}
+            <div
+              className="d-flex justify-content-center align-items-center"
+              style={{
+                width: "350px",
+                height: "350px",
+                overflow: "hidden",
+                clipPath: "circle(50% at 50% 50%)",
+                backgroundColor: customColors[secondaryColor as keyof typeof customColors],
+                position: "relative",
+                zIndex: 1,
+              }}
             >
-              <CircleButton
-                stateChange={stateChange}
-                text={HomeContent[currentPage].buttonText}
-                color={currentColor === darkColors.colorWhite ? "colorBlack" : currentColor}
-              />
+              <div
+                className="d-flex justify-content-center align-items-center bg-lightGrey1"
+                style={{
+                  width: "320px",
+                  height: "320px",
+                  borderRadius: "50%",
+                  clipPath: "circle(50% at 50% 50%)",
+
+                }}
+              >
+                <CircleButton
+                  stateChange={stateChange}
+                  text={HomeContent[currentPage].buttonText}
+                  color={currentColor === darkColors.colorWhite ? "colorBlack" : currentColor}
+                  link={HomeContent[currentPage].link}
+                />
+              </div>
             </div>
           </div>
 

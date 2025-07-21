@@ -6,6 +6,7 @@ export type HomeContentType = {
   buttonText: string;
   darkColor: string;
   lightColor: string;
+  link: string;
 };
 
 export const HomeContent: Record<number, HomeContentType> = {
@@ -15,6 +16,7 @@ export const HomeContent: Record<number, HomeContentType> = {
     buttonText: "Home",
     darkColor: darkColors.colorWhite,
     lightColor: lightColors.colorBlack,
+    link: "/home",
   },
   1: {
     title: "About Me",
@@ -22,6 +24,7 @@ export const HomeContent: Record<number, HomeContentType> = {
     buttonText: "About",
     darkColor: darkColors.colorNavy,
     lightColor: lightColors.colorNavyLight,
+    link: "/about",
   },
   2: {
     title: "Contact",
@@ -29,6 +32,7 @@ export const HomeContent: Record<number, HomeContentType> = {
     buttonText: "Contact",
     darkColor: darkColors.colorPurple,
     lightColor: lightColors.colorPurpleLight,
+    link: "/contact",
   },
   3: {
     title: "Projects",
@@ -36,6 +40,7 @@ export const HomeContent: Record<number, HomeContentType> = {
     buttonText: "Projects",
     darkColor: darkColors.colorRose,
     lightColor: lightColors.colorRoseLight,
+    link: "/projects",
   },
   4: {
     title: "Skills",
@@ -43,6 +48,7 @@ export const HomeContent: Record<number, HomeContentType> = {
     buttonText: "Skills",
     darkColor: darkColors.colorCoral,
     lightColor: lightColors.colorCoralLight,
+    link: "/skills",
   },
 };
 

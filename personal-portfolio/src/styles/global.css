@@ -30,7 +30,7 @@
 }
 
 .shadow {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
   box-shadow: none !important;
 }
 
@@ -112,7 +112,7 @@ body {
 .spin-in,
 .spin-out {
   transform-origin: 50% 150%;
-  animation-duration: 1s;
+  animation-duration: 0.7s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
@@ -135,3 +135,32 @@ body {
   to   { transform: rotate(0deg); }
 }
 
+.orbit-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  animation: orbit 10s linear infinite;
+  transform-origin: center;
+  z-index: 0;
+}
+
+.orbiting-circle {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.4); /* adjust as needed */
+  border-radius: 50%;
+  position: absolute;
+  left: 260px;
+  top: -25px;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
