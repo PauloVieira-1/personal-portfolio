@@ -32,7 +32,11 @@ function Home() {
   };
 
   const handPrevClick = () => {
-    setCurrentPage((prev) => (prev - 1 + Object.keys(HomeContent).length) % Object.keys(HomeContent).length);
+    setCurrentPage(
+      (prev) =>
+        (prev - 1 + Object.keys(HomeContent).length) %
+        Object.keys(HomeContent).length,
+    );
     const prevColor = getPrevColor("dark");
     const prevSecondaryColor = getPrevColor("light");
     setCurrentColor(prevColor);
@@ -106,7 +110,10 @@ function Home() {
             xmlns="http://www.w3.org/2000/svg"
             width="60"
             height="60"
-            fill={customColors[secondaryColor as keyof typeof customColors] || "currentColor"}
+            fill={
+              customColors[secondaryColor as keyof typeof customColors] ||
+              "currentColor"
+            }
             className="bi bi-arrow-left-circle text-primary enlarge"
             viewBox="0 0 16 16"
             role="button"
@@ -139,7 +146,8 @@ function Home() {
                 height: "350px",
                 overflow: "hidden",
                 clipPath: "circle(50% at 50% 50%)",
-                backgroundColor: customColors[secondaryColor as keyof typeof customColors],
+                backgroundColor:
+                  customColors[secondaryColor as keyof typeof customColors],
                 position: "relative",
                 zIndex: 1,
               }}
@@ -151,7 +159,6 @@ function Home() {
                   height: "320px",
                   borderRadius: "50%",
                   clipPath: "circle(50% at 50% 50%)",
-
                 }}
               >
                 <CircleButton
@@ -169,7 +176,10 @@ function Home() {
             xmlns="http://www.w3.org/2000/svg"
             width="60"
             height="60"
-            fill={customColors[secondaryColor as keyof typeof customColors] || "currentColor"}
+            fill={
+              customColors[secondaryColor as keyof typeof customColors] ||
+              "currentColor"
+            }
             className="bi bi-arrow-right-circle text-primary enlarge"
             viewBox="0 0 16 16"
             role="button"

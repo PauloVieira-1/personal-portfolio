@@ -11,7 +11,6 @@ export const darkColors = {
 };
 
 export const customColors = {
-
   colorPurple: "#B01336",
   colorPurpleLight: "#510A32",
 

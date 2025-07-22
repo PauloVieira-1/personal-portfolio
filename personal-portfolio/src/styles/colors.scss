@@ -2,17 +2,17 @@
 @import "../../node_modules/bootstrap/scss/variables";
 
 $custom-colors: (
-  colorNavy: #2D142C,
-  colorNavyLight: #3B1A35,
+  colorNavy: #2d142c,
+  colorNavyLight: #3b1a35,
 
-  colorPurple: #B01336,
-  colorPurpleLight: #510A32,
+  colorPurple: #b01336,
+  colorPurpleLight: #510a32,
 
-  colorRose: #C72C41,
-  colorRoseLight: #D94356,
+  colorRose: #c72c41,
+  colorRoseLight: #d94356,
 
-  colorCoral: #EE4540,
-  colorCoralLight: #F36D66,
+  colorCoral: #ee4540,
+  colorCoralLight: #f36d66,
 
   colorBlack: #000000,
   colorWhite: #ffffff,
@@ -20,8 +20,8 @@ $custom-colors: (
   lightGrey1: #e5e5e5,
 
   colorBlue: #20232a,
-  colorBlueLight: #2B2F38,
-  colorBlueLighter: #3B3F48,
+  colorBlueLight: #2b2f38,
+  colorBlueLighter: #3b3f48,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

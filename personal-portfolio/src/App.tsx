@@ -1,11 +1,10 @@
-import { Routes, Route } from "react-router-dom"
-import Home from "./pages/Home"
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import Home2 from "./pages/Home2";
 import "./styles/global.css";
-import "./styles/colors.css"
+import "./styles/colors.css";
 
 function App() {
-
   return (
     <>
       <Routes>
@@ -14,9 +13,8 @@ function App() {
         <Route path="/about" element={<div>About</div>} />
         <Route path="/contact" element={<div>Contact</div>} />
       </Routes>
-
     </>
-  )
+  );
 }
 
-export default App
+export default App;

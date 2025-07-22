@@ -51,4 +51,3 @@ export const HomeContent: Record<number, HomeContentType> = {
     link: "/skills",
   },
 };
-
