@@ -73,8 +73,12 @@ function Home2() {
   return (
     <Container fluid className="h-100" style={{ height: "100vh" }}>
       <Row className="h-100">
-        <Col className="bg-colorBlue p-5" xs={7}>
-          <Button color={customColors[secondaryColor as keyof typeof customColors]}/>
+        <Col className={`p-5 text-center`} xs={7} style={{
+            background: "linear-gradient(to bottom right, #9c4f4fff -230%, #20232a 40%)",
+        }}>
+          <Button text="Home" color={customColors[secondaryColor as keyof typeof customColors]}/>
+          <Button text="About" color={customColors[secondaryColor as keyof typeof customColors]}/>
+          <Button text="Contact" color={customColors[secondaryColor as keyof typeof customColors]}/>
         </Col>
         <Col className="bg-colorBlueLight d-flex align-items-center justify-content-center" xs={5}>
           <div className="d-flex flex-column  w-100 h-100">
@@ -147,6 +151,9 @@ function Home2() {
                     height: "320px",
                     borderRadius: "50%",
                     clipPath: "circle(50% at 50% 50%)",
+                    borderStyle: "dashed",
+                    borderWidth: "3px",
+                    borderColor: customColors[darkColors.colorCoral as keyof typeof customColors],
                   }}
                   >
                   <CircleButton

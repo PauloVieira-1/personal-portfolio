@@ -1,11 +1,16 @@
 import { useState } from "react";
 
-function Button({ color }: { color?: string }) {
+interface ButtonProps {
+  color?: string;
+  text: string;
+}
+
+function Button({ color, text }: ButtonProps) {
   const [hovered, setHovered] = useState(false);
 
   return (
     <button
-      className={`button rounded-4 shadow-button ${hovered ? "text-white" : ""}`}
+      className={`button rounded-5 shadow-button mx-4 px-5 fw-lighter ${hovered ? "text-white" : ""}`}
       style={{
         // borderColor: color,
         transition: "box-shadow 0.3s ease",
@@ -15,7 +20,7 @@ function Button({ color }: { color?: string }) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      Click me
+      {text}
     </button>
   );
 }

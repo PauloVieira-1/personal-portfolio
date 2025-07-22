@@ -189,13 +189,14 @@ button {
   padding: 15px 30px;
   text-align: center;
   font-size: 18px;
-  letter-spacing: 1px;
-  text-decoration: none;
+  letter-spacing: 3px;
+
   background: transparent;
   cursor: pointer;
   transition: ease-out 0.5s;
   /* border: 2px solid; */
   border-radius: 10px;
+;
 }
 button.shadow-button {
   position: relative;
@@ -234,6 +235,7 @@ button.shadow-button:hover {
   ;
 }
 
-button:active {
-  transform: scale(0.95);
+button.shadow-button:hover:active {
+  box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.9) !important;
+  transform: scale(0.95) !important;
 }
