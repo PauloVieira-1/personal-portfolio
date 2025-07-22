@@ -77,7 +77,26 @@ function Home2() {
           <p>This is a new home page layout.</p>
         </Col>
         <Col className="bg-colorBlueLight d-flex align-items-center justify-content-center" xs={5}>
-          <div className="d-flex align-items-center gap-4">
+          <div className="d-flex flex-column  w-100 h-100">
+        <Row className="w-100">
+    <div className="mb-4 ps-0 position-relative mb-5">
+  <h2
+    className="text-colorBlue fw-bold display-1 m-0"
+    style={{ fontSize: "9rem", lineHeight: 1, position: "relative", left: "-1rem" }}
+  >
+    Paulo
+  </h2>
+  <p
+    className="text-colorBlueLighter display-1 fw-bold m-0"
+    style={{ lineHeight: 1 }}
+  >
+    Vieira
+  </p>
+</div>
+
+        </Row>
+        <Row className="w-100 d-flex align-items-center ms-3 mt-5">
+          <div className="d-flex align-items-center gap-4 mt-5">
             {/* Left arrow */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -88,11 +107,11 @@ function Home2() {
               viewBox="0 0 16 16"
               role="button"
               onClick={handPrevClick}
-            >
+              >
               <path
                 fillRule="evenodd"
                 d="M8.354 11.354a.5.5 0 0 1-.708 0L4.5 8.207l3.146-3.147a.5.5 0 0 1 .708.708L5.707 8l2.647 2.646a.5.5 0 0 1 0 .708z"
-              />
+                />
             </svg>
 
             {/* Orbiting system */}
@@ -102,11 +121,11 @@ function Home2() {
                 width: "350px",
                 height: "350px",
               }}
-            >
+              >
 
               {/* <div className="orbit-wrapper">
                 <div className="orbiting-circle" />
-              </div> */}
+                </div> */}
 
               {/* Main circular button area */}
               <div
@@ -120,7 +139,7 @@ function Home2() {
                   position: "relative",
                   zIndex: 1,
                 }}
-              >
+                >
                 <div
                   className="d-flex justify-content-center align-items-center bg-colorBlueLight"
                   style={{
@@ -129,13 +148,13 @@ function Home2() {
                     borderRadius: "50%",
                     clipPath: "circle(50% at 50% 50%)",
                   }}
-                >
+                  >
                   <CircleButton
                     stateChange={stateChange}
                     text={HomeContent[currentPage].buttonText}
                     color={currentColor}
                     link={HomeContent[currentPage].link}
-                  />
+                    />
                 </div>
               </div>
             </div>
@@ -150,13 +169,15 @@ function Home2() {
               viewBox="0 0 16 16"
               role="button"
               onClick={handNextClick}
-            >
+              >
               <path
                 fillRule="evenodd"
                 d="M7.646 4.646a.5.5 0 0 1 .708 0L11.5 8l-3.146 3.146a.5.5 0 0 1-.708-.708L10.293 8 7.646 5.354a.5.5 0 0 1 0-.708z"
-              />
+                />
             </svg>
           </div>
+        </Row>
+    </div>
         </Col>
       </Row>
     </Container>

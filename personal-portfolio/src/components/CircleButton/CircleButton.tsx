@@ -9,7 +9,7 @@ interface CircleButtonProps {
 }
 
 function CircleButton({ text, color, stateChange, link}: CircleButtonProps) {
-  const bgClass = color ? `bg-${color}` : 'bg-primary';
+  const bgClass = color ? `bg-colorBlue` : 'bg-primary';
   const animationClass = stateChange ? 'spin-out' : 'spin-in';
 
   return (

@@ -21,6 +21,7 @@ $custom-colors: (
 
   colorBlue: rgba(32, 35, 42, 1),
   colorBlueLight: #2B2F38,
+  colorBlueLighter: #3B3F48,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

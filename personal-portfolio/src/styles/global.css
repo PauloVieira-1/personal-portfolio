@@ -30,27 +30,21 @@
 }
 
 .shadow {
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: none !important;
 }
 
 .shadow:hover {
   box-shadow:
-    /* Dark base shadow */
-    rgba(0, 0, 0, 0.3) 0px 16px 32px,
-
-    /* Mid-range fill shadow */
+    rgba(0, 0, 0, 0.5) 0px 20px 40px,
     rgba(0, 0, 0, 0.2) 0px 8px 16px,
+    rgba(255, 255, 255, 0.1) 0px -10px 10px,
+    rgba(255, 255, 255, 0.15) 0px 0px 30px !important;
 
-    /* Strong white top light */
-    rgba(255, 255, 255, 1) 0px -20px 10px,
-
-    /* Soft ambient white glow around */
-    rgba(255, 255, 255, 0.15) 0px 0px 30px
-    !important;
-
-    transform: scale(1.02) !important;
+  transform: scale(1.02); /* no !important here */
 }
+
+
 
 body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif!important;
