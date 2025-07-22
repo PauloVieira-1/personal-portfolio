@@ -71,12 +71,13 @@ function Home() {
   return (
     <Container
       fluid
-      className={`p-0 m-0 transition bg-${currentColor}`}
+      className={`p-0 m-0 transition`}
       style={{
         height: "100vh",
         display: "flex",
         flexDirection: "column",
         zIndex: 1000,
+        backgroundImage: `linear-gradient(to bottom, ${customColors[currentColor as keyof typeof customColors]} 20%, ${customColors[secondaryColor as keyof typeof customColors]})`,
       }}
     >
       <div
@@ -156,7 +157,7 @@ function Home() {
                 <CircleButton
                   stateChange={stateChange}
                   text={HomeContent[currentPage].buttonText}
-                  color={currentColor === darkColors.colorWhite ? "colorBlack" : currentColor}
+                  color={currentColor}
                   link={HomeContent[currentPage].link}
                 />
               </div>
