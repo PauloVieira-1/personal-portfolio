@@ -165,3 +165,75 @@ html, body, #root {
   margin: 0;
   padding: 0;
 }
+
+.shadow-button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none !important;
+}
+
+.shadow-button:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.5) 0px 20px 40px,
+    rgba(0, 0, 0, 0.2) 0px 8px 16px,
+    rgba(255, 255, 255, 0.1) 0px -10px 10px,
+    rgba(255, 255, 255, 0.15) 0px 0px 30px !important;
+
+  transform: scale(1.02); /* no !important here */
+}
+
+
+button {
+  position: relative;
+  display: inline-block;
+  margin: 15px;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  /* border: 2px solid; */
+  border-radius: 10px;
+}
+button.shadow-button {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* color: inherit; */
+}
+
+button.shadow-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0; 
+  height: 100%;
+  width: 0;
+  /* background-color: currentColor; */
+  z-index: -1;
+  transition: width 0.4s ease;
+}
+
+button.shadow-button:hover::before {
+  width: 100%; 
+  left: 0;
+  right: auto;
+}
+
+button.shadow-button:hover {
+  /* color: white; */
+  transform: scale(1.02);
+  box-shadow:
+    rgba(0, 0, 0, 0.5) 0px 20px 40px,
+    rgba(0, 0, 0, 0.2) 0px 8px 16px,
+    rgba(255, 255, 255, 0.1) 0px -10px 10px,
+    rgba(255, 255, 255, 0.15) 0px 0px 30px;
+  ;
+}
+
+button:active {
+  transform: scale(0.95);
+}

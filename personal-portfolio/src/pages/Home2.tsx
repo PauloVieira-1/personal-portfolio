@@ -3,6 +3,7 @@ import CircleButton from "../components/CircleButton/CircleButton";
 import { useState, useEffect } from "react";
 import { darkColors, lightColors, customColors } from "../types";
 import { HomeContent } from "./HomeContent";
+import Button from "../components/Button/Button";
 
 function Home2() {
 
@@ -72,9 +73,8 @@ function Home2() {
   return (
     <Container fluid className="h-100" style={{ height: "100vh" }}>
       <Row className="h-100">
-        <Col className="bg-colorBlue" xs={7}>
-          <h1>Welcome to Home2</h1>
-          <p>This is a new home page layout.</p>
+        <Col className="bg-colorBlue p-5" xs={7}>
+          <Button color={customColors[secondaryColor as keyof typeof customColors]}/>
         </Col>
         <Col className="bg-colorBlueLight d-flex align-items-center justify-content-center" xs={5}>
           <div className="d-flex flex-column  w-100 h-100">
