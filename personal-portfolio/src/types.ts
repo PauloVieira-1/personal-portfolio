@@ -1,24 +1,26 @@
 export const lightColors = {
-  colorPurpleLight: "colorPurpleLight",
   colorRoseLight: "colorRoseLight",
   colorCoralLight: "colorCoralLight",
+  colorTurquoiseLight: "colorTurquoiseLight",
 };
 
 export const darkColors = {
-  colorPurple: "colorPurple",
   colorRose: "colorRose",
   colorCoral: "colorCoral",
+  colorTurquoise: "colorTurquoise",
 };
 
 export const customColors = {
-  colorPurple: "#B01336",
-  colorPurpleLight: "#510A32",
 
   colorRose: "#C72C41",
   colorRoseLight: "#D94356",
+  colorTurquoise: "#0f969c",
 
   colorCoral: "#EE4540",
   colorCoralLight: "#F36D66",
+  colorTurquoiseLight: "#6Da5C0",
+
+
 } as const;
 
 export type CircleButtonProps = {

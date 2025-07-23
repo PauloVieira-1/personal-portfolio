@@ -14,7 +14,7 @@ function CircleButton({ text, color, stateChange, link }: CircleButtonProps) {
   return (
     <Link to={link || "#"} className="text-decoration-none orbiter">
       <button className={`circle-button shadow  ${bgClass} ${animationClass}`}>
-        <h2 className="circle-button__icon">{text}</h2>
+        <h2 className="fw-bold text-colorBlueLighter">{text}</h2>
       </button>
     </Link>
   );

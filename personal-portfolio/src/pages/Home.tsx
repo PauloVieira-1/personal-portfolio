@@ -6,8 +6,8 @@ import { HomeContent } from "./HomeContent";
 
 function Home() {
   const [currentPage, setCurrentPage] = useState(0);
-  const [currentColor, setCurrentColor] = useState(darkColors.colorWhite);
-  const [secondaryColor, setSecondaryColor] = useState(lightColors.colorBlack);
+  const [currentColor, setCurrentColor] = useState(darkColors.colorCoral);
+  const [secondaryColor, setSecondaryColor] = useState(lightColors.colorCoralLight);
   const [stateChange, setStateChange] = useState(true);
 
   useEffect(() => {

@@ -28,6 +28,19 @@
   transform: scale(1.4);
 }
 
+.enlarge-arrow {
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+.enlarge-arrow:hover {
+  transform: scale(1.4);
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
 .shadow {
   transition:
     transform 0.3s ease,

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { darkColors, lightColors, customColors } from "../types";
 import { HomeContent } from "./HomeContent";
 import Button from "../components/Button/Button";
+import Socials from "../components/Socials/Socials";
 
 function Home2() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -99,6 +100,9 @@ function Home2() {
     color={customColors[secondaryColor as keyof typeof customColors]}
   />
 </div>
+<Row className="mt-5 d-flex flex-column justify-content-center align-items-center float-start">
+  <Socials color={customColors[secondaryColor as keyof typeof customColors]}/>
+</Row>
 <Row
   className="mt-5 d-flex flex-column justify-content-end align-items-start text-end"
   style={{ height: "85%" }}
@@ -203,7 +207,7 @@ Developer  </p>
                         borderWidth: "3px",
                         borderColor:
                           customColors[
-                            darkColors.colorCoral as keyof typeof customColors
+                            currentColor as keyof typeof customColors
                           ],
                       }}
                     >
@@ -246,3 +250,4 @@ Developer  </p>
 }
 
 export default Home2;
+
