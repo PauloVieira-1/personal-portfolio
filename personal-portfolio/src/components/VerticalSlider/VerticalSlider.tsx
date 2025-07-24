@@ -19,7 +19,7 @@ function VerticalSlider() {
     <input
         type="range"
         className="form-range custom-vertical-slider"
-        style={{ writingMode: 'vertical-rl', height: '400px', fill: 'none', width: '50px', borderRadius: '50px' }}
+        style={{ writingMode: 'vertical-rl', height: '400px', width: '50px', borderRadius: '50px', outline: 'none' }}
         list="tickmarks"
         step="1"
         value={value}

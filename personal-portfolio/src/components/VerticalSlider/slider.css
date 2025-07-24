@@ -8,6 +8,7 @@
   border: none;
   margin: 0;
   padding: 0;
+  border-radius: 50px;
   cursor: pointer;
 }
 
@@ -15,7 +16,7 @@
 .custom-vertical-slider::-webkit-slider-runnable-track {
   width: 8px;
   height: 100%;
-  background-color: transparent !important;
+  background: linear-gradient(to top, #9c4f4fff -200%, #20232a 50%) !important;
   box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.6) !important;
   border: none;
   border-radius: 50px !important;
@@ -55,4 +56,23 @@
   border: 2px solid #2b2f38 !important;
   border-radius: 50%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none !important;
+}
+
+.custom-vertical-slider:hover {
+    transform: scale(1.02);
+    transition: transform 0.1s ease;
+}
+
+.custom-vertical-slider::-webkit-slider-thumb:active {
+  outline: none !important;
+}
+
+.custom-vertical-slider:active {
+    outline: none !important;
+}
+
+.custom-vertical-slider:focus,
+.custom-vertical-slider:active {
+  outline: none !important;
 }

@@ -69,10 +69,12 @@ body {
 
 @keyframes right-to-left {
   from {
+    opacity: 0;
     transform: translateX(100%);
   }
   to {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -101,6 +103,22 @@ body {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+.right-to-left-fast {
+  transition: all 0.8s ease;
+  animation: right-to-left-fast 0.8s ease forwards;
+}
+
+@keyframes right-to-left-fast {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
