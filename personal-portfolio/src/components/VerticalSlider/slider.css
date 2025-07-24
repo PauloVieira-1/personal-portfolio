@@ -1,0 +1,58 @@
+.custom-vertical-slider {
+  writing-mode: vertical-rl;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 70px;
+  height: 100%;
+  background: transparent !important;
+  border: none;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ✅ WebKit: Real invisible track */
+.custom-vertical-slider::-webkit-slider-runnable-track {
+  width: 8px;
+  height: 100%;
+  background-color: transparent !important;
+  box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.6) !important;
+  border: none;
+  border-radius: 50px !important;
+  margin-left: 16px; /* center 8px track in 40px total width */
+}
+
+/* ✅ Thumb - visible, dark, correct size */
+.custom-vertical-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px !important;
+  height: 30px !important;
+  background: #2b2f38 !important;
+  border: 2px solid #f36d66!important;
+  border-radius: 50%;
+  margin-left: -20px !important;
+  right: 9px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.);
+}
+
+/* ✅ Firefox support */
+.custom-vertical-slider::-moz-range-track {
+  background-color: transparent;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 6px;
+  width: 8px;
+}
+
+.custom-vertical-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: #2b2f38 !important;
+  border: 2px solid #2b2f38 !important;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
