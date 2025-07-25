@@ -76,3 +76,33 @@
 .custom-vertical-slider:active {
   outline: none !important;
 }
+
+.bubble {
+  background-color: #2b2f38;
+  color: #fff;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  outline:#f36d66 solid 2px!important;
+  width: 100px !important;
+  }
+
+  .bubble p {
+    margin: 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #f36d66;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .bubble:hover {
+    background-color: #f36d66;
+    color: #f36d66;  
+    cursor: pointer;
+    outline:#f36d66 solid 2px!important;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  }
