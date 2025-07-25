@@ -115,11 +115,11 @@ datalist {
 
 span.active {
   font-size: 16px;
-  outline: #89837b solid 1px !important ;
-  color: #f36d66;
+  outline: #3b3f48 solid 3px !important ;
   border-radius: 25px;
   padding: 7px 25px 7px 25px !important;
-  color: #DFD1BE;
+  color: #91959e;
+  font-weight: 550;
   cursor: pointer;
   /* outline: #f36d66 solid 2px !important; */
   transition:
@@ -141,6 +141,7 @@ span.active:hover {
       transform 0.3s ease,
       outtline 0.3s ease;
     transform: scale(1.05);
+    color: #fff;
 
 }
 
