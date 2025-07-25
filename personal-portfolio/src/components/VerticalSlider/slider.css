@@ -104,8 +104,6 @@
     background-color 0.3s ease,
     color 0.3s ease,
     transform 0.3s ease;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transform: scale(1.05);
 }
 
@@ -115,24 +113,35 @@ datalist {
   color: #f36d66;
 }
 
-span {
+span.active {
   font-size: 16px;
+  outline: #89837b solid 1px !important ;
   color: #f36d66;
-  /* outline: #f36d66 solid 2px !important ; */
   border-radius: 25px;
-  padding: 7px 25px 7px 25px;
-}
-
-span:hover {
-  background-color: #f36d66;
-  color: #ffffff;
+  padding: 7px 25px 7px 25px !important;
+  color: #DFD1BE;
   cursor: pointer;
   /* outline: #f36d66 solid 2px !important; */
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
-    transform 0.3s ease;
-
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform 0.3s ease,
+    outtline 0.3s ease;
   transform: scale(1.05);
+  width: 100px !important;
 }
+
+span.active:hover {
+    background-color: #f36d66;
+    outline: none !important;
+    cursor: pointer !important;
+    transition:
+      background-color 0.3s ease,
+      color 0.3s ease,
+      transform 0.3s ease,
+      outtline 0.3s ease;
+    transform: scale(1.05);
+
+}
+
+

@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./slider.css";
 
+const sliderText = {
+  1: "Home",
+  2: "About",
+  3: "Projects",
+  4: "Contact",
+  5: "Resume",
+};
+
 function VerticalSlider() {
-  const [value, setValue] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = parseInt(e.target.value);
-    const snapVal = Math.round(val / 25) * 25;
-    setValue(snapVal);
+    setCurrentPage(val);
+    console.log(val);
   };
 
   const handleMouseDown = (e: React.MouseEvent<HTMLInputElement>) => {
@@ -16,11 +25,11 @@ function VerticalSlider() {
   };
 
   return (
-    <Container fluid className="h-100">
+    <Container fluid className="h-100 mt-5">
       <Row className="h-100">
         <Col
           className="d-flex align-items-center justify-content-around float-end text-center flex-column"
-          xs={8}
+          xs={5}
         ></Col>
         <Col
           className="d-flex align-items-center justify-content-center"
@@ -31,9 +40,14 @@ function VerticalSlider() {
               className="d-flex flex-column justify-content-between"
               style={{ height: "400px", marginRight: "10px" }}
             >
-              {[100, 75, 50, 25, 0].map((pct) => (
-                <span key={pct} className="text-center shadow-button">
-                  {pct}%
+              {Object.entries(sliderText).map(([page, text]) => (
+                <span
+                  key={page}
+                  className={`page text-center   ${currentPage === parseInt(page) ? "active" : ""}`}
+                  onClick={() => setCurrentPage(parseInt(page))}
+                  style={{ cursor: "pointer" }}
+                >
+                  {text}
                 </span>
               ))}
             </div>
@@ -49,11 +63,11 @@ function VerticalSlider() {
                 outline: "none",
               }}
               step="1"
-              value={value}
+              value={currentPage}
               onChange={handleChange}
               onMouseDown={handleMouseDown}
-              min="0"
-              max="100"
+              min="1"
+              max="5"
             />
           </div>
         </Col>
