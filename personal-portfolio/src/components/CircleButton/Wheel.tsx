@@ -1,5 +1,5 @@
 import { useState } from "react";
-import CircleButton  from "./CircleButton";
+import CircleButton from "./CircleButton";
 import { HomeContent } from "../../pages/HomeContent";
 import { customColors, darkColors, lightColors } from "../../types";
 import { Row } from "react-bootstrap";
@@ -11,14 +11,14 @@ type WheelProps = {
 export const Wheel = ({ stateChange }: WheelProps) => {
   const [currentPage, setCurrentPage] = useState(0);
   const [currentColor, setCurrentColor] = useState(darkColors.colorCoral);
-  const [secondaryColor, setSecondaryColor] = useState(lightColors.colorCoralLight);
-const [revealed, setRevealed] = useState(false);
+  const [secondaryColor, setSecondaryColor] = useState(
+    lightColors.colorCoralLight,
+  );
+  const [revealed, setRevealed] = useState(false);
 
-
-const handleStateChange = () => {
+  const handleStateChange = () => {
     setStateChange(!stateChange);
   };
-
 
   const handNextClick = () => {
     setCurrentPage((prev) => (prev + 1) % Object.keys(HomeContent).length);
@@ -82,7 +82,10 @@ const handleStateChange = () => {
           xmlns="http://www.w3.org/2000/svg"
           width="60"
           height="60"
-          fill={customColors[secondaryColor as keyof typeof customColors] || "currentColor"}
+          fill={
+            customColors[secondaryColor as keyof typeof customColors] ||
+            "currentColor"
+          }
           className="bi bi-arrow-left-circle text-primary enlarge"
           viewBox="0 0 16 16"
           role="button"
@@ -114,7 +117,8 @@ const handleStateChange = () => {
               height: "350px",
               overflow: "hidden",
               clipPath: "circle(50% at 50% 50%)",
-              backgroundColor: customColors[secondaryColor as keyof typeof customColors],
+              backgroundColor:
+                customColors[secondaryColor as keyof typeof customColors],
               position: "relative",
               zIndex: 1,
             }}
@@ -128,7 +132,8 @@ const handleStateChange = () => {
                 clipPath: "circle(50% at 50% 50%)",
                 borderStyle: "dashed",
                 borderWidth: "3px",
-                borderColor: customColors[currentColor as keyof typeof customColors],
+                borderColor:
+                  customColors[currentColor as keyof typeof customColors],
               }}
             >
               <CircleButton
@@ -146,7 +151,10 @@ const handleStateChange = () => {
           xmlns="http://www.w3.org/2000/svg"
           width="60"
           height="60"
-          fill={customColors[secondaryColor as keyof typeof customColors] || "currentColor"}
+          fill={
+            customColors[secondaryColor as keyof typeof customColors] ||
+            "currentColor"
+          }
           className="bi bi-arrow-right-circle text-primary enlarge"
           viewBox="0 0 16 16"
           role="button"
@@ -159,5 +167,5 @@ const handleStateChange = () => {
         </svg>
       </div>
     </Row>
-    );
-}
+  );
+};

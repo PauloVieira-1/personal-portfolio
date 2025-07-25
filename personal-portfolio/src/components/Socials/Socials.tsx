@@ -41,7 +41,7 @@ function Socials({ color }: SocialsProps) {
           <div
             key={index}
             className="rounded-circle p-3 buttton shadow-button"
-            style={{cursor:"pointer"}}
+            style={{ cursor: "pointer" }}
           >
             <Icon size={24} color={color} />
           </div>
@@ -69,4 +69,3 @@ function Socials({ color }: SocialsProps) {
 }
 
 export default Socials;
-
