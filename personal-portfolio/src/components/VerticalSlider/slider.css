@@ -113,49 +113,55 @@ datalist {
   color: #f36d66;
 }
 
-span:hover {
+/* Base state (applies to all spans) */
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   font-size: 16px;
-  outline: #3b3f48 solid 3px !important ;
-  border-radius: 25px;
-  padding: 7px 25px 7px 25px !important;
-  color: #91959e;
   font-weight: 550;
+  width: 100px;
+  padding: 7px 25px;
+  border-radius: 25px;
   cursor: pointer;
-  /* outline: #f36d66 solid 2px !important; */
+  color: #4a4c53;
+
   transition:
     background-color 0.3s ease,
     color 0.3s ease,
     transform 0.3s ease,
-    outtline 0.3s ease;
-  transform: scale(1.05);
-  width: 100px !important;
+    outline 0.3s ease;
 }
 
-span.active {
-  background-color: #f36d66;
-  font-size: 16px;
-  font-weight: 550;
-  width: 100px !important;
 
-  outline: none !important;
-  cursor: pointer !important;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    outtline 0.3s ease;
-  transform: scale(1.05);
-  color: #fff;
-  border-radius: 25px;
-  padding: 7px 27px 7px 27px !important;
-}
-
-/* span:hover{
+/* Hover state */
+/* span:hover {
+  outline: #3b3f48 solid 3px;
   color: #91959e;
-  transition:
-    background-color 0.3s ease,
-    color 0.3s ease,
-    transform 0.3s ease,
-    outtline 0.3s ease;
   transform: scale(1.05);
 } */
+
+/* Active state */
+span.active {
+  color: #fff;
+  outline: none;
+  transform: scale(1.05);
+  background-color: #3b3f48; /* Or any active bg */
+}
+
+
+.shadow-button:hover{
+  color: #b8bbc5;
+  transform: scale(1.02);
+  box-shadow:
+  rgba(0, 0, 0, 0.5) 0px 20px 40px,
+  rgba(0, 0, 0, 0.2) 0px 8px 16px,
+  rgba(255, 255, 255, 0.1) 0px -10px 10px,
+  rgba(255, 255, 255, 0.15) 0px 0px 30px;
+  font-weight: 580;
+}
+
+span.active:hover{
+  color: white
+}

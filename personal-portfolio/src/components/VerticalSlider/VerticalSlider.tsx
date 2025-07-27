@@ -12,8 +12,10 @@ const sliderText = {
 
 function VerticalSlider({
   changePage,
+  color,
 }: {
   changePage: (page: number) => void;
+  color: string;
 }) {
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -40,13 +42,16 @@ function VerticalSlider({
         >
           <div className="d-flex align-items-center justify-content-center h-100 mb-3">
             <div
-              className="d-flex flex-column justify-content-between"
-              style={{ height: "400px", marginRight: "10px" }}
+              className="d-flex flex-column justify-content-between text-center"
+              style={{
+                height: "400px",
+                marginRight: "10px",
+              }}
             >
               {Object.entries(sliderText).map(([page, text]) => (
                 <span
                   key={page}
-                  className={`page text-center ${currentPage === parseInt(page) ? "active" : ""}`}
+                  className={`page text-center shadow-button ${currentPage === parseInt(page) ? `active bg-${color}`  : ""}`}
                   onClick={() => setCurrentPage(parseInt(page))}
                   style={{ cursor: "pointer" }}
                 >
@@ -64,6 +69,7 @@ function VerticalSlider({
                 width: "50px",
                 borderRadius: "50px",
                 outline: "none",
+                color: color,
               }}
               step="1"
               value={currentPage}
@@ -80,3 +86,4 @@ function VerticalSlider({
 }
 
 export default VerticalSlider;
+

@@ -7,7 +7,7 @@ export type HomeContentType = {
   darkColor: string;
   lightColor: string;
   link: string;
-};
+}; 
 
 export const HomeContent: Record<number, HomeContentType> = {
   0: {

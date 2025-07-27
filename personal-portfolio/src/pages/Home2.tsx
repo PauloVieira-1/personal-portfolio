@@ -1,25 +1,20 @@
 import { Col, Row, Container } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { darkColors, lightColors, customColors } from "../types";
-import { HomeContent } from "./HomeContent";
+import { ContentPages } from "./ContentPages";
 import Button from "../components/Button/Button";
 import Socials from "../components/Socials/Socials";
 import VerticalSlider from "../components/VerticalSlider/VerticalSlider";
-import { ContentPages } from "./ContentPages";
 
 function Home2() {
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentColor, setCurrentColor] = useState(darkColors.colorCoral);
   const [secondaryColor, setSecondaryColor] = useState(
     lightColors.colorCoralLight,
   );
 
   useEffect(() => {
-    const initialColor = HomeContent[currentPage].darkColor;
-    const initialSecondaryColor = HomeContent[currentPage].lightColor;
-    setCurrentColor(initialColor);
+    const initialSecondaryColor = ContentPages[currentPage].lightColor;
     setSecondaryColor(initialSecondaryColor);
-    console.log(ContentPages[currentPage]?.component);
   }, [currentPage]);
 
   return (
@@ -95,7 +90,7 @@ function Home2() {
               </Row>
               <Row className="w-100">
                 <div className="d-flex justify-content-center align-items-center">
-                  <VerticalSlider changePage={setCurrentPage} />
+                  <VerticalSlider changePage={setCurrentPage} color={secondaryColor} />
                 </div>
               </Row>
             </div>
