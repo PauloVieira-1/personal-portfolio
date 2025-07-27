@@ -284,3 +284,28 @@ div.shadow-button:hover:active {
   box-shadow: inset 0 0 13px rgba(0, 0, 0, 0.6) !important;
   transform: scale(0.95) !important;
 }
+
+.bottom-fade-in-fast {
+  animation: fadeInBottomFast 0.5s ease-in-out;
+}
+
+.bottom-fade-in-slow {
+  animation: fadeInBottomSlow 1.1s ease-in-out;
+}
+
+@keyframes fadeInBottomFast {
+    from {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    to { opacity: 1 }
+}
+
+@keyframes fadeInBottomSlow {
+    from {
+        opacity: 0;
+        transform: translateY(80%);
+    }
+    to { opacity: 1 }
+}
+
