@@ -1,6 +1,6 @@
 import { Col, Row, Container } from "react-bootstrap";
 import { useState, useEffect } from "react";
-import { darkColors, lightColors, customColors } from "../types";
+import { lightColors, customColors } from "../types";
 import { ContentPages } from "./ContentPages";
 import Button from "../components/Button/Button";
 import Socials from "../components/Socials/Socials";
@@ -19,7 +19,7 @@ function Home2() {
 
   return (
     <>
-      <Container fluid className="h-100" style={{ height: "100vh" }}>
+      <Container fluid className="" style={{ height: "100vh"}}>
         <Row className="h-100">
           <Col
             className={`p-5 text-center`}
@@ -57,7 +57,7 @@ function Home2() {
               />
             </Row>
             <Row className="ms-5 mt-5" style={{ height: "85%" }}>
-              <Container className="h-100 ps-5 mt-5">
+              <Container className=" ps-5 mt-5" style={{ overflow: "scroll", height: "70vh"}}>
                 {ContentPages[currentPage]?.component}
               </Container>
             </Row>
