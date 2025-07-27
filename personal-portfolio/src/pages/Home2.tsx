@@ -5,6 +5,30 @@ import { HomeContent } from "./HomeContent";
 import Button from "../components/Button/Button";
 import Socials from "../components/Socials/Socials";
 import VerticalSlider from "../components/VerticalSlider/VerticalSlider";
+import { ContentPages } from "./ContentPages"
+
+const HomeText = <Row
+              className="mt-5 d-flex flex-column justify-content-end align-items-start text-end"
+              style={{ height: "85%" }}
+            >
+              <h1
+                className="text-colorBlueLighter fw-bold display-1 left-to-right-fast"
+                style={{
+                  fontSize: "7rem",
+                  lineHeight: 1,
+                  right: "-2rem",
+                  position: "relative",
+                }}
+              >
+                Web <br />
+              </h1>
+              <p
+                className="text-colorBlueLight display-1 fw-bold m-0 left-to-right"
+                style={{ lineHeight: 1, right: "-2rem", position: "relative" }}
+              >
+                Developer{" "}
+              </p>
+            </Row>
 
 function Home2() {
   const [currentPage, setCurrentPage] = useState(0);
@@ -18,6 +42,7 @@ function Home2() {
     const initialSecondaryColor = HomeContent[currentPage].lightColor;
     setCurrentColor(initialColor);
     setSecondaryColor(initialSecondaryColor);
+    console.log(ContentPages[currentPage]?.component)
   }, [currentPage]);
 
   return (
@@ -59,28 +84,7 @@ function Home2() {
                 }
               />
             </Row>
-            <Row
-              className="mt-5 d-flex flex-column justify-content-end align-items-start text-end"
-              style={{ height: "85%" }}
-            >
-              <h1
-                className="text-colorBlueLighter fw-bold display-1 left-to-right-fast"
-                style={{
-                  fontSize: "7rem",
-                  lineHeight: 1,
-                  right: "-2rem",
-                  position: "relative",
-                }}
-              >
-                Web <br />
-              </h1>
-              <p
-                className="text-colorBlueLight display-1 fw-bold m-0 left-to-right"
-                style={{ lineHeight: 1, right: "-2rem", position: "relative" }}
-              >
-                Developer{" "}
-              </p>
-            </Row>
+              {ContentPages[currentPage]?.component}
           </Col>
           <Col
             className="bg-colorBlueLight d-flex align-items-center justify-content-center"
@@ -111,10 +115,7 @@ function Home2() {
               <Row className="w-100">
                 <div className="d-flex justify-content-center align-items-center">
                   <VerticalSlider
-                    min={0}
-                    max={100}
-                    value={50}
-                    onChange={(value) => setValue(value)}
+                    changePage = {setCurrentPage}
                   />
                 </div>
               </Row>

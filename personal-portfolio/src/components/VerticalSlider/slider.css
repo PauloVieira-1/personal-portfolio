@@ -145,4 +145,13 @@ span.active:hover {
 
 }
 
+span:hover{
+  color: #91959e;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    outtline 0.3s ease;
+  transform: scale(1.05);
+}
 
