@@ -1,11 +1,10 @@
-
 function Projects() {
-    return (
-        <div className="text-white">
-        <h1>PROJECTS</h1>
-        <p>TEXT</p>
-        </div>
-    )
+  return (
+    <div className="text-white text-start">
+      <h1>PROJECTS</h1>
+      <p>TEXT</p>
+    </div>
+  );
 }
 
-export default Projects
+export default Projects;

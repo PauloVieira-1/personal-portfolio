@@ -113,7 +113,7 @@ datalist {
   color: #f36d66;
 }
 
-span.active {
+span:hover {
   font-size: 16px;
   outline: #3b3f48 solid 3px !important ;
   border-radius: 25px;
@@ -131,21 +131,26 @@ span.active {
   width: 100px !important;
 }
 
-span.active:hover {
-    background-color: #f36d66;
-    outline: none !important;
-    cursor: pointer !important;
-    transition:
-      background-color 0.3s ease,
-      color 0.3s ease,
-      transform 0.3s ease,
-      outtline 0.3s ease;
-    transform: scale(1.05);
-    color: #fff;
+span.active {
+  background-color: #f36d66;
+  font-size: 16px;
+  font-weight: 550;
+  width: 100px !important;
 
+  outline: none !important;
+  cursor: pointer !important;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease,
+    outtline 0.3s ease;
+  transform: scale(1.05);
+  color: #fff;
+  border-radius: 25px;
+  padding: 7px 27px 7px 27px !important;
 }
 
-span:hover{
+/* span:hover{
   color: #91959e;
   transition:
     background-color 0.3s ease,
@@ -153,5 +158,4 @@ span:hover{
     transform 0.3s ease,
     outtline 0.3s ease;
   transform: scale(1.05);
-}
-
+} */

@@ -10,7 +10,11 @@ const sliderText = {
   5: "Resume",
 };
 
-function VerticalSlider({ changePage }: { changePage: (page: number) => void }) {
+function VerticalSlider({
+  changePage,
+}: {
+  changePage: (page: number) => void;
+}) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -26,10 +30,19 @@ function VerticalSlider({ changePage }: { changePage: (page: number) => void }) 
   return (
     <Container fluid className="h-100 mt-5">
       <Row className="h-100">
-        <Col xs={5} className="d-flex align-items-center justify-content-around float-end text-center flex-column"></Col>
-        <Col xs={4} className="d-flex align-items-center justify-content-center">
+        <Col
+          xs={5}
+          className="d-flex align-items-center justify-content-around float-end text-center flex-column"
+        ></Col>
+        <Col
+          xs={4}
+          className="d-flex align-items-center justify-content-center"
+        >
           <div className="d-flex align-items-center justify-content-center h-100 mb-3">
-            <div className="d-flex flex-column justify-content-between" style={{ height: "400px", marginRight: "10px" }}>
+            <div
+              className="d-flex flex-column justify-content-between"
+              style={{ height: "400px", marginRight: "10px" }}
+            >
               {Object.entries(sliderText).map(([page, text]) => (
                 <span
                   key={page}
