@@ -6,25 +6,16 @@ interface SocialsProps {
 }
 
 const socialsLinks = [
-  {
-    icon: FaGithub,
-    link: "https://github.com/PauloVieira-1",
-  },
-  {
-    icon: FaLinkedin,
-    link: "https://www.linkedin.com/in/paulo-vieira-1bb344308",
-  },
-  {
-    icon: FaInstagram,
-    link: "https://www.instagram.com/1paulo_v/",
-  },
-]
+  { icon: FaGithub, link: "https://github.com/PauloVieira-1" },
+  { icon: FaLinkedin, link: "https://www.linkedin.com/in/paulo-vieira-1bb344308" },
+  { icon: FaInstagram, link: "https://www.instagram.com/1paulo_v/" },
+];
 
 function Socials({ color }: SocialsProps) {
   const [revealed, setRevealed] = useState(false);
 
   const togglePanel = () => {
-    setRevealed(!revealed);
+    setRevealed((prev) => !prev);
   };
 
   return (
@@ -33,8 +24,7 @@ function Socials({ color }: SocialsProps) {
         position: "fixed",
         top: "30%",
         left: revealed ? "0" : "-140px",
-        width: "200px",
-        height: "auto",
+        width: "170px",
         padding: "10px",
         display: "flex",
         alignItems: "center",
@@ -42,7 +32,7 @@ function Socials({ color }: SocialsProps) {
         zIndex: 1000,
       }}
     >
-      {/* Icons Column */}
+      {/* Icons */}
       <div
         style={{
           display: "flex",
@@ -52,19 +42,19 @@ function Socials({ color }: SocialsProps) {
           flex: 1,
         }}
       >
-        {[FaGithub, FaLinkedin, FaInstagram].map((Icon, index) => (
+        {socialsLinks.map(({ icon: Icon, link }, i) => (
           <div
-            key={index}
+            key={i}
             className="rounded-circle p-3 buttton shadow-button"
             style={{ cursor: "pointer" }}
-            onClick={() => window.open(socialsLinks[index].link, "_blank")}
-
+            onClick={() => window.open(link, "_blank")}
           >
             <Icon size={24} color={color} />
           </div>
         ))}
       </div>
 
+      {/* Arrow */}
       <div style={{ marginLeft: "10px" }}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -72,8 +62,9 @@ function Socials({ color }: SocialsProps) {
           height="40"
           fill={color}
           viewBox="0 0 16 16"
-          className={`enlarge-arrow ${revealed ? "rotate" : ""}`}
+          className={`enlarge-arrow position-relative ${revealed ? "rotate" : ""}`}
           onClick={togglePanel}
+          style={{ cursor: "pointer" }}
         >
           <path
             fillRule="evenodd"

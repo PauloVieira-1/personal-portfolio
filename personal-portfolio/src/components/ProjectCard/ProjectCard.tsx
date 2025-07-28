@@ -1,31 +1,33 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Button from "../Button/Button";
 import { customColors } from "../../types";
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  image: string;
-  githubLink: string;
-  liveLink: string;
-}
+import CustomModal from "../Modal/Modal";
+import { useState } from "react";
+import type {Project} from "../../pages/ProjectsContent";
 
 function ProjectCard({
   title,
   description,
-  image,
+  keyFeatures,
+  images,
+  type,
+  techStack,
   githubLink,
   liveLink,
-}: ProjectCardProps) {
+}: Project) {
+
+  const [showModal, setShowModal] = useState(false);
+
   return (
-    <Container className="my-5 enlarge-small bottom-fade-in-slow " style={{ cursor: "pointer" }}>
+    <>
+    <Container className="my-5 enlarge-small bottom-fade-in-slow " style={{ cursor: "pointer" }} onClick={() => setShowModal(true)}>
 
       <Row className="g-0 bg-colorBlue rounded-4 overflow-hidden shadow-lg card-content">
       <div className="p-3 d-flex ">
         {/* Image */}
         <Col md={5}>
           <img
-            src={image}
+            src={images[0]}
             alt={`${title} Screenshot`}
             className="img-fluid h-100 w-100 object-fit-cover rounded-start-3"
             style={{ objectFit: "cover", minHeight: "100%" }}
@@ -50,6 +52,8 @@ function ProjectCard({
             </div>
       </Row>
     </Container>
+    <CustomModal showModal={showModal} setShowModal={setShowModal} images={images} keyFeatures={keyFeatures} title={title} description={description} githubLink={githubLink} liveLink={liveLink} type={type} techStack={techStack}/>
+    </>
   );
 }
 

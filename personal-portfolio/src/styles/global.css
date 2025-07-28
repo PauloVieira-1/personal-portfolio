@@ -31,15 +31,34 @@
 .enlarge-arrow {
   transition: transform 0.2s ease;
   cursor: pointer;
+  right: -30px;
 }
 
 .enlarge-arrow:hover {
   transform: scale(1.4);
 }
 
+
 .rotate {
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateX(55px) !important; 
+  transition: transform 0.3s ease;
 }
+
+.enlarge-arrow {
+  transition: transform 0.3s ease;
+}
+
+
+@keyframes right-to-left {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+
 
 .shadow {
   transition:

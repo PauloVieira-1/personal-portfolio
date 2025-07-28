@@ -6,7 +6,7 @@ function Contact() {
   return (
     <Container className="my-0 text-light">
       <Row className="justify-content-center">
-        <Col lg={8} className="bg-blue p-5 rounded-4 shadow-lg">
+        <Col lg={8} className="bg-blue px-5 py-4 rounded-4 shadow-lg">
           {/* Heading */}
           <h2 className="fw-bold mb-3 text-center">Get In Touch</h2>
           <p className="text-secondary text-center mb-4">
