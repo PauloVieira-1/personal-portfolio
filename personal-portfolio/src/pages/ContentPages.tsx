@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 import About from "./About";
 import Projects from "./Projects";
 import HomeText from "./HomeText";
+import Contact from "./Contact";
 import { darkColors, lightColors } from "../types";
 
 interface Page {
@@ -36,10 +37,11 @@ export const ContentPages: Record<number, Page> = {
   },
   4: {
     title: "Contact",
-    component: <div>CONTACT</div>,
+    component: <Contact />,
     darkColor: darkColors.colorCoral,
     lightColor: lightColors.colorCoralLight,
     link: "/contact",
-  },
-};
+}
+}
+
 

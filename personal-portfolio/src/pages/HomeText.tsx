@@ -10,7 +10,7 @@ function HomeText() {
         style={{
           fontSize: "7rem",
           lineHeight: 1,
-          right: "-2rem",
+          right: "0rem", //should be -2
           position: "relative",
         }}
       >
@@ -18,7 +18,7 @@ function HomeText() {
       </h1>
       <p
         className="text-colorBlueLight display-1 fw-bold m-0 left-to-right"
-        style={{ lineHeight: 1, right: "-2rem", position: "relative" }}
+        style={{ lineHeight: 1, right: "0rem", position: "relative" }} //should be -2
       >
         Developer{" "}
       </p>

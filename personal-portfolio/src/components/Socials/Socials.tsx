@@ -1,9 +1,24 @@
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 
 interface SocialsProps {
   color: string;
 }
+
+const socialsLinks = [
+  {
+    icon: FaGithub,
+    link: "https://github.com/PauloVieira-1",
+  },
+  {
+    icon: FaLinkedin,
+    link: "https://www.linkedin.com/in/paulo-vieira-1bb344308",
+  },
+  {
+    icon: FaInstagram,
+    link: "https://www.instagram.com/1paulo_v/",
+  },
+]
 
 function Socials({ color }: SocialsProps) {
   const [revealed, setRevealed] = useState(false);
@@ -37,11 +52,13 @@ function Socials({ color }: SocialsProps) {
           flex: 1,
         }}
       >
-        {[FaGithub, FaLinkedin, FaTwitter].map((Icon, index) => (
+        {[FaGithub, FaLinkedin, FaInstagram].map((Icon, index) => (
           <div
             key={index}
             className="rounded-circle p-3 buttton shadow-button"
             style={{ cursor: "pointer" }}
+            onClick={() => window.open(socialsLinks[index].link, "_blank")}
+
           >
             <Icon size={24} color={color} />
           </div>

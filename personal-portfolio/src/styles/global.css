@@ -311,5 +311,16 @@ div.shadow-button:hover:active {
 
 .enlarge-small:hover {
   transform: scale(1.03);
-  transition: transform 0.4s ease;
+  transition: transform 0.4s ease, outline 0.4s ease;
 }
+
+.card-content{
+  border-radius: 15px;
+  overflow: hidden;
+  transition: outline 0.3s ease;}
+
+.card-content:hover {
+  outline: #fff solid 0.5px;
+}
+
+
