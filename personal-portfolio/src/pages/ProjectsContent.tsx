@@ -67,7 +67,6 @@ const cardData: Project[] = [
       "Node.js",
     ],
     githubLink: "https://github.com/PauloVieira-1/coffee-shop",
-    liveLink: "https://paulovieira-1.github.io/coffee-shop/"
   },
   {
     title: "SolarTrace",
@@ -88,7 +87,6 @@ const cardData: Project[] = [
       "Tailwind"
     ],
     githubLink: "https://github.com/PauloVieira-1/SolarTrace",
-    liveLink: "https://paulovieira-1.github.io/SolarTrace/"
   },
   {
   title: "Project Mapper",
@@ -107,7 +105,6 @@ const cardData: Project[] = [
     "VSCode API",
   ],
   githubLink: "https://github.com/PauloVieira-1/project-mapper",
-  liveLink: "" // Optional: No live link since it's an extension
 },
 {
   title: "Class Compass",
@@ -129,7 +126,6 @@ const cardData: Project[] = [
     "Geoapify API"
   ],
   githubLink: "https://github.com/PauloVieira-1/class-compass",
-  liveLink: "" // Optional: Extensions don’t have a live site
 }
 ];
 
