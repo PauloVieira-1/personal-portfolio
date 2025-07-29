@@ -32,7 +32,8 @@ function CustomModal({
     >
       <Modal.Body className="p-0">
         <div className="p-4">
-          <Modal.Title className="fw-bold display-6 mb-3">{title}</Modal.Title>
+          <Modal.Title className="fw-bold display-6 mb-2">{title}</Modal.Title>
+          <h5 className="fw-lighter mb-5">                {type}</h5>
           
           {/* Image Carousel */}
           <Carousel interval={null} className="my-4 rounded-3">
@@ -65,13 +66,14 @@ function CustomModal({
             <Col md={6}>
               <h5 className="fw-semibold mb-2">Tech Stack</h5>
               <div className="small text-secondary">
-                {type}
                 {techStack && (
-                  <ul>
+                  <div className="d-flex flex-wrap gap-1 p-3">
                     {techStack.map((tech, i) => (
-                      <li key={i}>{tech}</li>
+                      <span key={i} className=" bg-colorBlue rounded-pill p-1 text-light fw-light my-1">
+                        {tech}
+                      </span>
                     ))}
-                  </ul>
+                  </div>
                 )}
               </div>
             </Col>
@@ -80,20 +82,22 @@ function CustomModal({
           {/* Buttons */}
           <div className="mt-4 d-flex gap-3">
             {githubLink && (
-              <Button
-                color={customColors.colorCoral}
-                text="GitHub"
-                onClick={() => window.open(githubLink, "_blank")}
-                bgColor={customColors.colorCoralLight}
-              />
+              <a href={githubLink} target="_blank">
+                <Button
+                  color={customColors.colorCoral}
+                  text="GitHub"
+                  bgColor={customColors.colorCoralLight}
+                />
+              </a>
             )}
             {liveLink && (
-              <Button
-                color={customColors.colorTurquoise}
-                text="Live Demo"
-                onClick={() => window.open(liveLink, "_blank")}
-                bgColor={customColors.colorTurquoiseLight}
-              />
+              <a href={liveLink} target="_blank">
+                <Button
+                  color={customColors.colorTurquoise}
+                  text="Live Demo"
+                  bgColor={customColors.colorTurquoiseLight}
+                />
+              </a>
             )}
           </div>
         </div>

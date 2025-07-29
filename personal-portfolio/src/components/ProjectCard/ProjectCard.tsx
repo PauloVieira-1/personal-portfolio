@@ -37,6 +37,7 @@ function ProjectCard({
         {/* Content */}
         <Col md={7} className="d-flex flex-column justify-content-center p-4 text-light">
           <h3 className="fw-bold mb-2">{title}</h3>
+          <h6 className="fw-lighter mb-4">{type}</h6>
           <p className="text-secondary mb-4">{description}</p>
 
           {/* Buttons side-by-side */}
