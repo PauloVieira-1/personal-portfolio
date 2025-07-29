@@ -1,8 +1,32 @@
 import { Container, Row, Col, Form } from "react-bootstrap";
 import Button from "../components/Button/Button";
 import { customColors } from "../types";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
+
 
 function Contact() {
+
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs.sendForm(
+        'service_xedvn6r',
+        'template_l2jjr0p',
+        form.current,
+        'lefNpA0eeHK4rVGKZ'
+      ).then((result) => {
+        console.log(result.text);
+        form.current?.reset();
+      }, (error) => {
+        console.log(error.text);
+      });
+    }
+  };
+
   return (
     <Container className="my-0 text-light">
       <Row className="justify-content-center">
@@ -15,11 +39,12 @@ function Contact() {
           </p>
 
           {/* Contact Form */}
-          <Form>
+          <Form ref={form} onSubmit={sendEmail}>
             <Form.Group className="mb-3" controlId="formName">
               <Form.Label>Name</Form.Label>
               <Form.Control
                 type="text"
+                name="name"
                 placeholder="Enter your name"
                 className="bg-dark text-light border-secondary"
               />
@@ -29,6 +54,7 @@ function Contact() {
               <Form.Label>Email</Form.Label>
               <Form.Control
                 type="email"
+                name="email"
                 placeholder="Enter your email"
                 className="bg-dark text-light border-secondary"
               />
@@ -39,6 +65,7 @@ function Contact() {
               <Form.Control
                 as="textarea"
                 rows={4}
+                name="message"
                 placeholder="Write your message..."
                 className="bg-dark text-light border-secondary"
               />
@@ -56,3 +83,4 @@ function Contact() {
 }
 
 export default Contact;
+

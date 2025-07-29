@@ -35,21 +35,25 @@ function ProjectCard({
         </Col>
 
         {/* Content */}
-        <Col md={7} className="d-flex flex-column justify-content-center p-4 text-light">
-          <h3 className="fw-bold mb-2">{title}</h3>
-          <h6 className="fw-lighter mb-4">{type}</h6>
-          <p className="text-secondary mb-4">{description}</p>
+        <Col 
+  md={7} 
+  className="d-flex flex-column justify-content-center ps-5 py-4 text-light"
+>
+  <h3 className="fw-bold mb-2">{title}</h3>
+  <h6 className="fw-lighter mb-4">{type}</h6>
+  <p className="text-secondary mb-4">{description}</p>
 
-          {/* Buttons side-by-side */}
-          <div className="d-flex gap-3 mt-auto align-items-end">
-            <a href={githubLink} target="_blank" rel="noopener noreferrer">
-              <Button color={customColors.colorCoral} text="GitHub" />
-            </a>
-            <a href={liveLink} target="_blank" rel="noopener noreferrer">
-              <Button color={customColors.colorTurquoise} text="Live" />
-            </a>
-          </div>
-        </Col>
+  <div className="d-flex justify-content-end gap-1 mt-auto">
+    {liveLink && (
+      <a href={liveLink} target="_blank" rel="noopener noreferrer" className="ms-2">
+        <Button color={customColors.colorTurquoise} text="Live" />
+      </a>
+    )}
+    <a href={githubLink} target="_blank" rel="noopener noreferrer">
+      <Button color={customColors.colorCoral} text="GitHub" />
+    </a>
+  </div>
+</Col>
             </div>
       </Row>
     </Container>
