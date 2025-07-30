@@ -40,11 +40,11 @@ function Projects() {
       <h2 className="fs-3 text-danger mb-4 bottom-fade-in-fast">My Work</h2>
       <div className="d-flex justify-content-center">
         <button
-          className={`shadow-butto tab-button ${currentTab === 1 ? "active-tab" : ""}`}
+          className={`shadow-butto tab-button bottom-fade-in-fast ${currentTab === 1 ? "active-tab" : ""}`}
           onClick={() => changeTab(1)}
         > Web Projects </button>
         <button
-          className={`shadow-butto tab-button ${currentTab === 2 ? "active-tab" : ""}`}
+          className={`shadow-butto tab-button bottom-fade-in-fast ${currentTab === 2 ? "active-tab" : ""}`}
           onClick={() => changeTab(2)}
         > Other </button>
       </div>

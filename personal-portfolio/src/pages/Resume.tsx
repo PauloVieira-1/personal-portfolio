@@ -2,6 +2,67 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "../components/Button/Button";
 import { customColors } from "../types";
 
+
+const workExperience = [
+  {
+    title: "Software Developer",
+    company: "Team HART",
+    startDate: "Apr 2025",
+    endDate: "Present",
+    description: [
+      "Backend development for a wearable sleeve with vibrating motors to assist visually impaired users in understanding emotional communication.",
+      "Developed backend using Rust, Python, and C++.",
+      "Worked on software infrastructure and CAD integration.",
+    ],
+  },
+  {
+    title: "Website Developer",
+    company: "Soniccraft",
+    startDate: "May 2024",
+    endDate: "Present",
+    description: [
+      "Designed and deployed Sonicbeats’ website showcasing bespoke speakers crafted from recycled oak wood.",
+      "Developed responsive UI with React, Bootstrap, and Three.js.",
+      "Implemented server-side logic and database integration using Node.js and MongoDB.",
+      "Optimized performance, ensuring cross-browser compatibility.",
+    ],
+  },
+  {
+    title: "Student Ambassador",
+    company: "Xior Student Housing",
+    startDate: "Apr 2024",
+    endDate: "Present",
+    description: [
+      "Organized events and community activities to enhance student living experience.",
+      "Acted as liaison between students and management.",
+      "Provided support and guidance to residents.",
+    ],
+  },
+  {
+    title: "Student Consultant",
+    company: "Solarwatt Benelux",
+    startDate: "Mar 2025",
+    endDate: "Jul 2025",
+    description: [
+      "Developed an online tool integrating with existing services to support SDG awareness.",
+      "Built an interactive course platform with React, TypeScript, Bootstrap, and Node.js.",
+      "Collaborated with a team to align technical solutions with sustainability goals.",
+    ],
+  },
+  {
+    title: "Deliverer",
+    company: "Flink",
+    startDate: "Oct 2023",
+    endDate: "Oct 2024",
+    description: [
+      "Delivered grocery orders accurately and on time.",
+      "Developed strong time management and organizational skills.",
+      "Provided excellent customer service during deliveries.",
+    ],
+  },
+];
+
+
 function Resume() {
   return (
     <Container>
@@ -13,42 +74,20 @@ function Resume() {
       </Row>
 
       {/* Work Experience */}
-      <Row>
-        <Col className="text-white text-start">
+      <Row className="">
+        <Col className="text-white text-start bottom-fade-in-slow">
           <h2 className="fw-bold mb-4">Work Experience</h2>
-
-          {/* Job 1 */}
-          <div className="mb-5">
-            <h4 className="fw-bold">Software Engineering Intern</h4>
-            <h5 className="">ABC Tech Solutions · Jun 2024 – Aug 2024</h5>
-            <ul className="fs-5  mt-2">
-              <li>Built reusable React components for an internal dashboard using Bootstrap.</li>
-              <li>Improved page load time by 30% by optimizing API calls and rendering logic.</li>
-              <li>Collaborated in an Agile team with daily standups and weekly demos.</li>
+        {workExperience.map((exp, index) => (
+            <div className="mb-5" key={index}>
+            <h4 className="fw-bold text-colorCoralLight">{exp.title}</h4>
+            <h5 className="fst-italic fw-normal mb-3">{exp.company} &middot; {exp.startDate} &ndash; {exp.endDate}</h5>
+            <ul className="fs-5 mt-2">
+              {exp.description.map((desc, i) => (
+                <li key={i}>{desc}</li>
+              ))}
             </ul>
           </div>
-
-          {/* Job 2 */}
-          <div className="mb-5">
-            <h4 className="fw-bold">Freelance Web Developer</h4>
-            <h5 className="">Self-employed · Jan 2023 – Present</h5>
-            <ul className="fs-5  mt-2">
-              <li>Developed custom websites and e-commerce solutions using React and TypeScript.</li>
-              <li>Delivered responsive, mobile-friendly UIs using Bootstrap and SCSS.</li>
-              <li>Integrated payment gateways, CMS platforms, and REST APIs.</li>
-            </ul>
-          </div>
-
-          {/* Job 3 */}
-          <div className="mb-5">
-            <h4 className="fw-bold">Teaching Assistant (CS Fundamentals)</h4>
-            <h5 className="">University of XYZ · Sep 2022 – May 2023</h5>
-            <ul className="fs-5  mt-2">
-              <li>Helped students grasp core CS concepts like data structures and algorithms.</li>
-              <li>Led weekly lab sessions and assisted in grading assignments.</li>
-              <li>Mentored project groups during the final term web development assignment.</li>
-            </ul>
-          </div>
+          ))}
         </Col>
       </Row>
       <Row>
