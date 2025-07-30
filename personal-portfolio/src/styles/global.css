@@ -341,5 +341,33 @@ div.shadow-button:hover:active {
 .card-content:hover {
   outline: #fff solid 0.5px;
 }
+.tab-button {
+  position: relative;
+  border-radius: 25px;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+.tab-button::after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
 
+.tab-button:hover::after {
+  width: 100%;
+}
+
+.active-tab{
+  color: #f36d66;
+}
