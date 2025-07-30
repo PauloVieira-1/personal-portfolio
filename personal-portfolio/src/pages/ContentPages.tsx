@@ -4,6 +4,7 @@ import Projects from "./Projects";
 import HomeText from "./HomeText";
 import Contact from "./Contact";
 import { darkColors, lightColors } from "../types";
+import Resume from "./Resume";
 
 interface Page {
   title: string;
@@ -41,7 +42,14 @@ export const ContentPages: Record<number, Page> = {
     darkColor: darkColors.colorCoral,
     lightColor: lightColors.colorCoralLight,
     link: "/contact",
-}
+},
+  5: {
+    title: "Resume",
+    component: <Resume />,
+    darkColor: darkColors.colorTurquoise,
+    lightColor: lightColors.colorTurquoiseLight,
+    link: "/resume",
+  },
 }
 
 

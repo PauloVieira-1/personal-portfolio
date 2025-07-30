@@ -26,19 +26,27 @@ function ProjectCard({
           <div className="p-3 d-flex " style={{width: "100%"}}>
             {/* Content */}
             <Col
-              className="d-flex flex-column justify-content-center ps-5 py-4 text-light"
+              className="d-flex flex-column justify-content-center px-3 pt-4 text-light"
             >
               <h3 className="fw-bold mb-2">{title}</h3>
               <h6 className="fw-lighter mb-4">{type}</h6>
               <p className="text-secondary mb-4">{description}</p>
-
-              <div className="d-flex justify-content-center align-items-center gap-1 mt-auto">
+            </Col>
+          </div>
+        <Row>
+          <Col className="d-flex flex-wrap justify-content-center align-items-center p-3">
+           {techStack.map((tech, i) => (
+                      <span key={i} className=" bg-colorBlueLight rounded-pill p-1 text-light fw-light mb-4 mx-2">
+                        {tech}
+                      </span>
+              ))}
+        </Col>
+        </Row>
+              <div className="d-flex justify-content-center align-items-center gap-1 mt-auto my-5 pt-3">
                 <a href={githubLink} target="_blank" rel="noopener noreferrer">
                   <Button color={customColors.colorCoral} text="GitHub" />
                 </a>
               </div>
-            </Col>
-          </div>
         </Row>
       </Container>
       {/* <CustomModal

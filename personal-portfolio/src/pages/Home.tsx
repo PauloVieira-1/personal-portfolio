@@ -2,7 +2,6 @@ import CircleButton from "../components/CircleButton/CircleButton";
 import { useState, useEffect } from "react";
 import { darkColors, lightColors, customColors } from "../types";
 import { Container } from "react-bootstrap";
-import { HomeContent } from "./HomeContent";
 
 function Home() {
   const [currentPage, setCurrentPage] = useState(0);

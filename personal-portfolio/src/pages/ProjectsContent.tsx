@@ -129,30 +129,36 @@ const cardData: Project[] = [
 }
 ];
 
-
 const assignments = [
   {
-    title: "Assignment 1",
-    description: "Assignment 1",
-    type: "E-Commerce Website",
-    techStack: ["React", "Bootstrap", "CSS / SCSS", "TypeScript"],
-    githubLink: "https://github.com/PauloVieira-1/assignment-1",
+    title: "Queue Simulation",
+    description: "This project implements a discrete-event simulation model to analyze student-instructor interactions during practical sessions. It compares two strategies: one with randomized student arrival and instructor breaks, and another with fixed intervals. The simulation aims to evaluate the efficiency of each setup by analyzing metrics like student abandonment rates, waiting times, and instructor break utilization. The insights gained help optimize scheduling systems in educational environments.",
+    type: "Discrete-Event Simulation",
+    techStack: ["Python", "SimPy", "Statistics"],
+    githubLink: "https://github.com/PauloVieira-1/queue-simulation",
   },
   {
-    title: "Assignment 2",
-    description: "Assignment 2",
-        type: "E-Commerce Website",
-    techStack: ["React", "Bootstrap", "CSS / SCSS", "TypeScript"],
-    githubLink: "https://github.com/PauloVieira-1/assignment-2",
+    title: "Lox Interpreter",
+    description: "This assignment is a full implementation of the Lox programming language interpreter in JavaScript, based on the 'Crafting Interpreters' book. The interpreter includes lexical analysis, parsing via recursive descent, abstract syntax tree (AST) construction, and a tree-walk evaluator. It supports features like variables, conditionals, loops, functions, and object-oriented programming with classes and inheritance. The project highlights a deep understanding of interpreter design and language processing.",
+    type: "Programming Language Interpreter",
+    techStack: ["JavaScript", "AST", "Parser", "Interpreter"],
+    githubLink: "https://github.com/PauloVieira-1/Lox-Interpreter",
   },
   {
-    title: "Assignment 3",
-    description: "Assignment 3",
-        type: "E-Commerce Website",
+    title: "CS50 2024",
+    description: "A comprehensive repository of assignments and projects completed as part of Harvard's CS50x 2024 course. It includes problem sets in C (memory, data structures, algorithms), Python (file I/O, APIs), SQL, JavaScript, and full-stack web development using Flask. Each assignment reflects a progressive mastery of computer science fundamentals, culminating in a final project that showcases practical application of all learned skills.",
+    type: "Full-Stack & Algorithms Course",
+    techStack: ["C", "Python", "SQL", "Flask", "JavaScript", "HTML", "CSS"],
+    githubLink: "https://github.com/PauloVieira-1/CS50-2024",
+  },
+  {
+    title: "Warehouse Automation",
+    description: "This simulation models a fully automated warehouse and manufacturing system using SimPy in Python. It incorporates key components such as a Manufacturing Preparation Center, an AGV (Automated Guided Vehicle) system with dynamic task allocation and battery management, and robotic work centers. Several scenarios are simulated, including baseline operations, AGV fleet optimization, operator break handling, and system throughput analysis. The results help evaluate and optimize industrial process efficiency.",
+    type: "Industrial Simulation / Operations Research",
+    techStack: ["Python", "SimPy", "Jupyter"],
+    githubLink: "https://github.com/PauloVieira-1/Warehouse-Automation",
+  },
+];
 
-    techStack: ["React", "Bootstrap", "CSS / SCSS", "TypeScript"],
-    githubLink: "https://github.com/PauloVieira-1/assignment-3",
-  },
-]
 
 export {cardData, assignments};
