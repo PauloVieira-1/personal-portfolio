@@ -18,9 +18,9 @@ import Mapper2 from "../assets/mapper2.png"
 export interface Project {
   title: string;
   description: string;
-  type: string;
-  keyFeatures: string[];
-  images: string[];
+  type?: string;
+  keyFeatures?: string[];
+  images?: string[];
   techStack: string[];    
   githubLink?: string;
   liveLink?: string;
@@ -129,4 +129,30 @@ const cardData: Project[] = [
 }
 ];
 
-export default cardData;
+
+const assignments = [
+  {
+    title: "Assignment 1",
+    description: "Assignment 1",
+    type: "E-Commerce Website",
+    techStack: ["React", "Bootstrap", "CSS / SCSS", "TypeScript"],
+    githubLink: "https://github.com/PauloVieira-1/assignment-1",
+  },
+  {
+    title: "Assignment 2",
+    description: "Assignment 2",
+        type: "E-Commerce Website",
+    techStack: ["React", "Bootstrap", "CSS / SCSS", "TypeScript"],
+    githubLink: "https://github.com/PauloVieira-1/assignment-2",
+  },
+  {
+    title: "Assignment 3",
+    description: "Assignment 3",
+        type: "E-Commerce Website",
+
+    techStack: ["React", "Bootstrap", "CSS / SCSS", "TypeScript"],
+    githubLink: "https://github.com/PauloVieira-1/assignment-3",
+  },
+]
+
+export {cardData, assignments};

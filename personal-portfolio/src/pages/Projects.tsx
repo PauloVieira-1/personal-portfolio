@@ -1,7 +1,7 @@
 import ProjectCard from "../components/ProjectCard/ProjectCard";
-import cardData from "./ProjectsContent";
+import ProjectCardText from "../components/ProjectCard/ProjectCardText";
+import {cardData, assignments} from "./ProjectsContent";
 import { useState } from "react";
-import { customColors } from "../types";
 
 const tabs = {
   1: cardData.map((card) => <ProjectCard
@@ -15,7 +15,14 @@ const tabs = {
         key={card.title}
         techStack={card.techStack}
       />),
-  2: <p>Coming soon...</p>,
+  2: assignments.map((card) => <ProjectCardText
+        title={card.title}
+        description={card.description}
+        githubLink={card.githubLink}
+        type={card.type}
+        key={card.title}
+        techStack={card.techStack}
+      />),
 };
 
 
