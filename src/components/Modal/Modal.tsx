@@ -37,7 +37,7 @@ function CustomModal({
 
           {/* Image Carousel */}
           <Carousel interval={null} className="my-4 rounded-3">
-            {images.map((img, index) => (
+            {images?.map((img, index) => (
               <Carousel.Item key={index}>
                 <img
                   src={img}
@@ -56,7 +56,7 @@ function CustomModal({
             <Col md={6}>
               <h5 className="fw-semibold mb-2">Key Features</h5>
               <ul className="small text-secondary">
-                {keyFeatures.map((feature, i) => (
+                {keyFeatures?.map((feature, i) => (
                   <li key={i}>{feature}</li>
                 ))}
               </ul>
