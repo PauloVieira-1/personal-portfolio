@@ -2,7 +2,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Button from "../components/Button/Button";
 import { customColors } from "../types";
 
-
 const workExperience = [
   {
     title: "Software Developer",
@@ -92,11 +91,14 @@ function Resume() {
       </Row>
       <Row>
         <Col className="text-white text-center mt-2">
+        <a href="/Paulo_Vieira_Resume.pdf" download className="text-decoration-none">
         <Button color={customColors.colorCoral} text="Download Resume" bgColor={customColors.colorCoral} />
+        </a>
         </Col>
       </Row>
     </Container>
   );
 }
+
 
 export default Resume;

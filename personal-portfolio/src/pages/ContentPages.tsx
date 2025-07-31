@@ -32,8 +32,8 @@ export const ContentPages: Record<number, Page> = {
   3: {
     title: "Projects",
     component: <Projects />,
-    darkColor: darkColors.colorTurquoise,
-    lightColor: lightColors.colorTurquoiseLight,
+    darkColor: darkColors.colorCoral,
+    lightColor: lightColors.colorCoralLight,
     link: "/projects",
   },
   4: {
@@ -46,8 +46,8 @@ export const ContentPages: Record<number, Page> = {
   5: {
     title: "Resume",
     component: <Resume />,
-    darkColor: darkColors.colorTurquoise,
-    lightColor: lightColors.colorTurquoiseLight,
+    darkColor: darkColors.colorRose,
+    lightColor: lightColors.colorRoseLight,
     link: "/resume",
   },
 }
