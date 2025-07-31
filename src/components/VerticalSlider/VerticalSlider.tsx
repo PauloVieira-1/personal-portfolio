@@ -52,7 +52,7 @@ function VerticalSlider({
                 <span
                   key={page}
                   className={`page text-center shadow-button ${currentPage === parseInt(page) ? `active bg-${color}` : ""}`}
-                  onClick={() => handleChange({ target: { value: page } })}
+                  onClick={() => setCurrentPage(parseInt(page))}
                   style={{ cursor: "pointer" }}
                 >
                   {text}

@@ -29,7 +29,7 @@ function ProjectCard({
             {/* Image */}
             <Col md={5}>
               <img
-                src={images[0]}
+                src={images ? images[0] : ""}
                 alt={`${title} Screenshot`}
                 className="img-fluid h-100 w-100 object-fit-cover rounded-start-3"
                 style={{ objectFit: "cover", minHeight: "100%" }}
