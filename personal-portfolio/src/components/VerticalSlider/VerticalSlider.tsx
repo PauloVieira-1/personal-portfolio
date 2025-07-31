@@ -51,7 +51,7 @@ function VerticalSlider({
               {Object.entries(sliderText).map(([page, text]) => (
                 <span
                   key={page}
-                  className={`page text-center shadow-button ${currentPage === parseInt(page) ? `active bg-${color}`  : ""}`}
+                  className={`page text-center shadow-button ${currentPage === parseInt(page) ? `active bg-${color}` : ""}`}
                   onClick={() => handleChange({ target: { value: page } })}
                   style={{ cursor: "pointer" }}
                 >
@@ -86,4 +86,3 @@ function VerticalSlider({
 }
 
 export default VerticalSlider;
-

@@ -3,11 +3,11 @@ import { useState } from "react";
 interface ButtonProps {
   color?: string;
   text: string;
-  onClick?: () => void;
+  changePage?: () => void;
   bgColor?: string;
 }
 
-function Button({ color, text, bgColor }: ButtonProps) {
+function Button({ color, text, bgColor, changePage }: ButtonProps) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -22,6 +22,7 @@ function Button({ color, text, bgColor }: ButtonProps) {
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={changePage}  
     >
       {text}
     </button>
@@ -29,4 +30,3 @@ function Button({ color, text, bgColor }: ButtonProps) {
 }
 
 export default Button;
-

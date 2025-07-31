@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 import About from "./About";
 import Projects from "./Projects";
 import HomeText from "./HomeText";
@@ -42,7 +42,7 @@ export const ContentPages: Record<number, Page> = {
     darkColor: darkColors.colorCoral,
     lightColor: lightColors.colorCoralLight,
     link: "/contact",
-},
+  },
   5: {
     title: "Resume",
     component: <Resume />,
@@ -50,6 +50,4 @@ export const ContentPages: Record<number, Page> = {
     lightColor: lightColors.colorRoseLight,
     link: "/resume",
   },
-}
-
-
+};

@@ -7,7 +7,10 @@ interface SocialsProps {
 
 const socialsLinks = [
   { icon: FaGithub, link: "https://github.com/PauloVieira-1" },
-  { icon: FaLinkedin, link: "https://www.linkedin.com/in/paulo-vieira-1bb344308" },
+  {
+    icon: FaLinkedin,
+    link: "https://www.linkedin.com/in/paulo-vieira-1bb344308",
+  },
   { icon: FaInstagram, link: "https://www.instagram.com/1paulo_v/" },
 ];
 

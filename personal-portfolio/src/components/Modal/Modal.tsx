@@ -33,8 +33,8 @@ function CustomModal({
       <Modal.Body className="p-0">
         <div className="p-4">
           <Modal.Title className="fw-bold display-6 mb-2">{title}</Modal.Title>
-          <h5 className="fw-lighter mb-5">                {type}</h5>
-          
+          <h5 className="fw-lighter mb-5"> {type}</h5>
+
           {/* Image Carousel */}
           <Carousel interval={null} className="my-4 rounded-3">
             {images.map((img, index) => (
@@ -43,7 +43,7 @@ function CustomModal({
                   src={img}
                   alt={`${title} screenshot ${index + 1}`}
                   className="img-fluid w-100 object-fit-cover rounded-3"
-                  style={{height: "400px"}}
+                  style={{ height: "400px" }}
                 />
               </Carousel.Item>
             ))}
@@ -69,7 +69,10 @@ function CustomModal({
                 {techStack && (
                   <div className="d-flex flex-wrap gap-1 p-3">
                     {techStack.map((tech, i) => (
-                      <span key={i} className=" bg-colorBlue rounded-pill p-1 text-light fw-light my-1">
+                      <span
+                        key={i}
+                        className=" bg-colorBlue rounded-pill p-1 text-light fw-light my-1"
+                      >
                         {tech}
                       </span>
                     ))}
@@ -107,4 +110,3 @@ function CustomModal({
 }
 
 export default CustomModal;
-

@@ -1,37 +1,41 @@
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import ProjectCardText from "../components/ProjectCard/ProjectCardText";
-import {cardData, assignments} from "./ProjectsContent";
+import { cardData, assignments } from "./ProjectsContent";
 import { useState } from "react";
+import type { JSX } from "react/jsx-runtime";
 
-const tabs = {
-  1: cardData.map((card) => <ProjectCard
-        title={card.title}
-        description={card.description}
-        images={card.images}
-        keyFeatures={card.keyFeatures}
-        type={card.type}
-        githubLink={card.githubLink}
-        liveLink={card.liveLink}
-        key={card.title}
-        techStack={card.techStack}
-      />),
-  2: assignments.map((card) => <ProjectCardText
-        title={card.title}
-        description={card.description}
-        githubLink={card.githubLink}
-        type={card.type}
-        key={card.title}
-        techStack={card.techStack}
-      />),
+const tabs : { [key: number]: JSX.Element[] } = {
+  1: cardData.map((card) => (
+    <ProjectCard
+      title={card.title}
+      description={card.description}
+      images={card.images}
+      keyFeatures={card.keyFeatures}
+      type={card.type}
+      githubLink={card.githubLink}
+      liveLink={card.liveLink}
+      key={card.title}
+      techStack={card.techStack}
+    />
+  )),
+  2: assignments.map((card) => (
+    <ProjectCardText
+      title={card.title}
+      description={card.description}
+      githubLink={card.githubLink}
+      type={card.type}
+      key={card.title}
+      techStack={card.techStack}
+    />
+  )),
 };
-
 
 function Projects() {
   const [currentTab, setCurrentTab] = useState(1);
 
   const changeTab = (tab: number) => {
     setCurrentTab(tab);
-    console.log("TEST")
+    console.log("TEST");
   };
 
   return (
@@ -42,11 +46,17 @@ function Projects() {
         <button
           className={`shadow-butto tab-button bottom-fade-in-fast ${currentTab === 1 ? "active-tab" : ""}`}
           onClick={() => changeTab(1)}
-        > Web Projects </button>
+        >
+          {" "}
+          Web Projects{" "}
+        </button>
         <button
           className={`shadow-butto tab-button bottom-fade-in-fast ${currentTab === 2 ? "active-tab" : ""}`}
           onClick={() => changeTab(2)}
-        > Other </button>
+        >
+          {" "}
+          Other{" "}
+        </button>
       </div>
       <div className="tab-content">{tabs[currentTab]}</div>
     </div>
@@ -54,4 +64,3 @@ function Projects() {
 }
 
 export default Projects;
-

@@ -134,7 +134,6 @@ span {
     outline 0.3s ease;
 }
 
-
 /* Hover state */
 /* span:hover {
   outline: #3b3f48 solid 3px;
@@ -150,18 +149,17 @@ span.active {
   background-color: #3b3f48; /* Or any active bg */
 }
 
-
-.shadow-button:hover{
+.shadow-button:hover {
   color: #b8bbc5;
   transform: scale(1.02);
   box-shadow:
-  rgba(0, 0, 0, 0.5) 0px 20px 40px,
-  rgba(0, 0, 0, 0.2) 0px 8px 16px,
-  rgba(255, 255, 255, 0.1) 0px -10px 10px,
-  rgba(255, 255, 255, 0.15) 0px 0px 30px;
+    rgba(0, 0, 0, 0.5) 0px 20px 40px,
+    rgba(0, 0, 0, 0.2) 0px 8px 16px,
+    rgba(255, 255, 255, 0.1) 0px -10px 10px,
+    rgba(255, 255, 255, 0.15) 0px 0px 30px;
   font-weight: 580;
 }
 
-span.active:hover{
-  color: white
+span.active:hover {
+  color: white;
 }
