@@ -62,10 +62,10 @@ function Home2() {
                     <Button text="About" color={customColors[secondaryColor as keyof typeof customColors]}/>
                   </div>
                   <div onClick={() => setCurrentPage(3)}>
-                    <Button text="Contact" color={customColors[secondaryColor as keyof typeof customColors]}/>
+                    <Button text="Projects" color={customColors[secondaryColor as keyof typeof customColors]}/>
                   </div>
                   <div onClick={() => setCurrentPage(4)}>
-                    <Button text="Projects" color={customColors[secondaryColor as keyof typeof customColors]}/>
+                    <Button text="Contact" color={customColors[secondaryColor as keyof typeof customColors]}/>
                   </div>
                   <div onClick={() => setCurrentPage(5)}>
                     <Button text="Resume" color={customColors[secondaryColor as keyof typeof customColors]}/>
@@ -74,11 +74,20 @@ function Home2() {
               </Offcanvas.Body>
             </Offcanvas>
 
-            <Row className="mt-5 d-flex flex-column justify-content-center align-items-center float-start">
+            <Row className="mt-5 flex-column justify-content-center align-items-center float-start d-none d-md-flex">
               <Socials color={customColors[secondaryColor as keyof typeof customColors]} />
             </Row>
 
-            <Row className="ms-5 mt-5" style={{ height: "100%" }}>
+            <Row className="ms-5 mt-5 d-none d-md-flex" style={{ height: "100%" }}>
+              <Container
+                className="ps-5 mt-5"
+                style={{ overflow: "scroll", height: "80vh" }}
+              >
+                {ContentPages[currentPage]?.component}
+              </Container>
+            </Row>
+
+            <Row className=" mt-5 d-md-none" style={{ height: "100%" }}>
               <Container
                 className="ps-5 mt-5"
                 style={{ overflow: "scroll", height: "80vh" }}

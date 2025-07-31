@@ -31,7 +31,7 @@ function Contact() {
   };
 
   return (
-    <Container className="my-0 text-light text-center">
+    <Container className="my-0 text-light text-center bottom-fade-in-slow ">
       <Row className="justify-content-center">
         <Col lg={8} className="bg-blue px-5 py-4 rounded-4 shadow-lg">
           {/* Heading */}

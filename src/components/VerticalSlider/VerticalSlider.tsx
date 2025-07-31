@@ -25,10 +25,6 @@ function VerticalSlider({
     changePage(value);
   };
 
-  const handleMouseDown = (event: React.MouseEvent<HTMLInputElement>) => {
-    event.currentTarget.focus();
-  };
-
   return (
     <Container fluid className="h-100 mt-5">
       <Row className="h-100">
@@ -49,15 +45,19 @@ function VerticalSlider({
               }}
             >
               {Object.entries(sliderText).map(([page, text]) => (
-                <span
-                  key={page}
-                  className={`page text-center shadow-button ${currentPage === parseInt(page) ? `active bg-${color}` : ""}`}
-                  onClick={() => setCurrentPage(parseInt(page))}
-                  style={{ cursor: "pointer" }}
-                >
-                  {text}
-                </span>
-              ))}
+  <span
+    key={page}
+    className={`page text-center shadow-button ${currentPage === parseInt(page) ? `active bg-${color}` : ""}`}
+    onClick={() => {
+      const pageNum = parseInt(page);
+      setCurrentPage(pageNum);
+      changePage(pageNum);
+    }}
+    style={{ cursor: "pointer" }}
+  >
+    {text}
+  </span>
+))}
             </div>
 
             <input
@@ -74,7 +74,6 @@ function VerticalSlider({
               step="1"
               value={currentPage}
               onChange={handleChange}
-              onMouseDown={handleMouseDown}
               min="1"
               max="5"
             />
@@ -86,3 +85,4 @@ function VerticalSlider({
 }
 
 export default VerticalSlider;
+
