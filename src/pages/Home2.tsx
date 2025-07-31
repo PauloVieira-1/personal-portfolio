@@ -23,7 +23,7 @@ function Home2() {
 
   return (
     <>
-      <Container fluid style={{ height: "100vh" }}>
+      <Container fluid style={{ height: "100vh", overflow: "hidden" }}>
         <Row className="h-100">
           {/* Main Content */}
           <Col
@@ -78,10 +78,10 @@ function Home2() {
               <Socials color={customColors[secondaryColor as keyof typeof customColors]} />
             </Row>
 
-            <Row className="ms-5 mt-5" style={{ height: "85%" }}>
+            <Row className="ms-5 mt-5" style={{ height: "100%" }}>
               <Container
                 className="ps-5 mt-5"
-                style={{ overflow: "scroll", height: "70vh" }}
+                style={{ overflow: "scroll", height: "80vh" }}
               >
                 {ContentPages[currentPage]?.component}
               </Container>

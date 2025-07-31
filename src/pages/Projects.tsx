@@ -41,7 +41,7 @@ function Projects() {
   return (
     <div className="text-white text-start">
       <h1 className="display-3 fw-bold mb-2 bottom-fade-in-fast">Projects</h1>
-      <h2 className="fs-3 text-danger mb-4 bottom-fade-in-fast">My Work</h2>
+      <h2 className="fs-3 text-colorRoseLight mb-4 bottom-fade-in-fast">My Work</h2>
       <div className="d-flex justify-content-center">
         <button
           className={`shadow-butto tab-button bottom-fade-in-fast ${currentTab === 1 ? "active-tab" : ""}`}

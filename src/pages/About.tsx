@@ -2,7 +2,7 @@ function About() {
   return (
     <div className="container text-light pt-1 text-start">
       <h1 className="display-3 fw-bold mb-2 bottom-fade-in-fast">Welcome</h1>
-      <h2 className="fs-3 text-danger mb-4 bottom-fade-in-fast">About Me</h2>
+      <h2 className="fs-3 text-colorRoseLight mb-4 bottom-fade-in-fast">About Me</h2>
 
       <p className="fs-5 text-secondary mb-4 bottom-fade-in-slow">
         I’m a creative developer with a passion for clean, maintainable code,

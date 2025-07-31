@@ -67,7 +67,7 @@ function Resume() {
       <Row className="mb-5">
         <Col className="text-white text-start">
           <h1 className="display-3 fw-bold mb-2 bottom-fade-in-fast">Resume</h1>
-          <h2 className="fs-3 text-danger mb-4 bottom-fade-in-fast">
+          <h2 className="fs-3 text-colorRoseLight mb-4 bottom-fade-in-fast">
             My Projects & Experience
           </h2>
         </Col>
@@ -93,16 +93,16 @@ function Resume() {
         </Col>
       </Row>
       <Row>
-        <Col className="text-white text-center mt-2">
+        <Col className="text-white text-center mt-2  mb-5">
           <a
             href="/Paulo_Vieira_Resume.pdf"
             download
-            className="text-decoration-none"
+            className="text-decoration-none mb-5"
           >
             <Button
-              color={customColors.colorCoral}
+              color={customColors.colorRoseLight}
               text="Download Resume"
-              bgColor={customColors.colorCoral}
+              bgColor={customColors.colorRose}
             />
           </a>
         </Col>

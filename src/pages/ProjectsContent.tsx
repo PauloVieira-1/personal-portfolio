@@ -145,6 +145,15 @@ const assignments = [
     techStack: ["Python", "SimPy", "Jupyter"],
     githubLink: "https://github.com/PauloVieira-1/Warehouse-Automation",
   },
+  {
+    title: "Team HART - Wearable Emotional Communication Device",
+    description:
+      "As a backend developer at Team HART, I contribute to the creation of an innovative wearable sleeve embedded with vibrating motors and integrated with a camera. The device detects facial features of people around the wearer and translates emotional cues into vibration patterns, aiding visually impaired users to understand emotional communication. My role focuses on developing the backend system using Rust, Python, and C++, ensuring reliable data processing, motor control, and seamless integration with the hardware.",
+    type: "Embedded Systems & Backend Development",
+    techStack: ["Rust", "Python", "C++", "Embedded Systems", "Backend"],
+    githubLink: "",
+  },
 ];
+
 
 export { cardData, assignments };

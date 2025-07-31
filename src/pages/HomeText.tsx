@@ -5,7 +5,7 @@ function HomeText() {
     <>
       {/* Large screens */}
       <Row
-        className="mt-5 d-flex flex-column justify-content-end align-items-start text-end d-none d-lg-flex"
+        className="mt-5 d-flex flex-column justify-content-end align-items-end text-end d-none d-lg-flex"
         style={{ height: "85%" }}
       >
         <h1
@@ -13,17 +13,25 @@ function HomeText() {
           style={{
             fontSize: "7rem",
             lineHeight: 1,
-            right: "0rem",
-            position: "relative",
           }}
         >
           Web <br />
         </h1>
         <p
-          className="text-colorBlueLight display-1 fw-bold m-0 left-to-right"
-          style={{ lineHeight: 1, right: "0rem", position: "relative" }}
+          className="text-colorBlueLight display-1 fw-bold m-0 left-to-right mb-2"
+          style={{ lineHeight: 1 }}
         >
           Developer{" "}
+        </p>
+
+        <p
+          className="text-colorBlueLighter fw-semibold m-0 mb-1 fade-in left-to-right mt-5 "
+          style={{
+            fontSize: "1.5rem",
+            opacity: 0.85,
+          }}
+        >
+          Hi, I’m Paulo and I like to build <br></br>things for the web
         </p>
       </Row>
 
@@ -44,7 +52,7 @@ function HomeText() {
             opacity: 0.85,
           }}
         >
-          Hi, I’m Paulo
+          Hi, I’m Paulo and I’m a{" "}
         </p>
 
         <h1
@@ -73,3 +81,4 @@ function HomeText() {
 }
 
 export default HomeText;
+
